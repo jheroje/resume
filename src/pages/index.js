@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 
 import Layout from '../components/Layout';
 
@@ -10,9 +10,15 @@ const IndexPage = () => {
   const [darkTheme, setDarkTheme] = useState(false);
 
   const toggleDarkTheme = () => {
-    console.log(darkTheme);
-    setDarkTheme(!darkTheme);
+    const toggle = !darkTheme;
+    
+    setDarkTheme(toggle);
+    localStorage.setItem('theme', toggle ? 'dark' : 'light')
   }
+
+  useEffect(() => { 
+    setDarkTheme(localStorage.getItem('theme') === 'dark');
+  }, []);
 
   return (
     <Layout>
