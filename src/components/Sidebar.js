@@ -28,9 +28,10 @@ export class Sidebar extends Component {
 
   render() {
     const { tabs, isCollapsed } = this.state;
+    const { darkTheme } = this.props;
     return (
       <nav
-        className="navbar navbar-expand-lg navbar-dark bg-primary fixed-top"
+        className={`navbar navbar-expand-lg navbar-dark bg-primary fixed-top ${darkTheme ? 'dark-theme' : ''}`}
         id="sideNav"
       >
         <a className="navbar-brand" href="#page-top">

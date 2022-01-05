@@ -3,7 +3,7 @@
 body {
   @include body-font;
   padding-top: 54px;
-  color: $gray-700;
+  color: $gray-800;
 }
 @media (min-width: 992px) {
   body {
@@ -21,7 +21,7 @@ h6 {
   @include heading-font;
   font-weight: 700;
   text-transform: uppercase;
-  color: $gray-800;
+  color: $gray-900;
 }
 
 h1 {
@@ -43,6 +43,7 @@ p.lead {
 }
 
 .subheading {
+  color: $gray-700;
   text-transform: uppercase;
   font-weight: 500;
   @include heading-font;
@@ -54,7 +55,7 @@ p.lead {
     display: inline-block;
     height: 3.5rem;
     width: 3.5rem;
-    background-color: $gray-700;
+    background-color: $gray-800;
     color: $white !important;
     border-radius: 100%;
     text-align: center;
@@ -76,5 +77,33 @@ p.lead {
     &:hover {
       color: $primary;
     }
+  }
+}
+
+
+.dark-theme-button {
+  position: fixed;
+  top: 10px;
+  right: 10px;
+  z-index: 1;
+  border-radius: 6px;
+  border: 2px solid black;
+  background: white;
+
+  &.dark-theme {
+    border-color: white;
+    filter: hue-rotate(0deg);
+  }
+}
+
+.container-fluid {
+  background: #eee;
+}
+
+.navbar, .container-fluid {
+  transition: filter 0.5s ease;
+
+  &.dark-theme {
+    filter: invert(1) hue-rotate(280deg);
   }
 }
