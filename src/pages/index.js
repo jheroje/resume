@@ -3,9 +3,11 @@ import config from '../../config';
 import Layout from '../components/Layout';
 import Sidebar from '../components/Sidebar';
 
+const browser = typeof window !== 'undefined';
+
 const IndexPage = () => {
   const [darkTheme, setDarkTheme] = useState(
-    typeof window !== 'undefined' && localStorage.getItem('theme') === 'dark'
+    browser && localStorage.getItem('theme') === 'dark'
   );
 
   const toggleDarkTheme = () => {
@@ -16,7 +18,7 @@ const IndexPage = () => {
   };
 
   return (
-    typeof window !== 'undefined' && (
+    browser && ( // defer rendering to the browser to prevent hard refresh messing with themes
       <Layout>
         <button
           type="button"
