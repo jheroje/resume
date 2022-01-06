@@ -4,8 +4,11 @@ import Scroll from './Scroll';
 
 import avatar from '../assets/images/avatar.png';
 import config from '../../config';
+import ThemeContext from './ThemeContext';
 
 export class Sidebar extends Component {
+  static contextType = ThemeContext;
+
   constructor(props) {
     super(props);
     this.state = {
@@ -28,10 +31,12 @@ export class Sidebar extends Component {
 
   render() {
     const { tabs, isCollapsed } = this.state;
-    const { darkTheme } = this.props;
+    const { darkTheme } = this.context;
     return (
       <nav
-        className={`navbar navbar-expand-lg navbar-dark bg-primary fixed-top ${darkTheme ? 'dark-theme' : ''}`}
+        className={`navbar navbar-expand-lg navbar-dark bg-primary fixed-top ${
+          darkTheme ? 'dark-theme' : ''
+        }`}
         id="sideNav"
       >
         <a className="navbar-brand" href="#page-top">
@@ -49,7 +54,7 @@ export class Sidebar extends Component {
         <button
           className={`navbar-toggler navbar-toggler-right ${
             isCollapsed ? 'collapsed' : ''
-            }`}
+          }`}
           type="button"
           data-toggle="collapse"
           aria-controls="navbarSupportedContent"
@@ -59,10 +64,12 @@ export class Sidebar extends Component {
         >
           <span className="navbar-toggler-icon"></span>
         </button>
-        <div className={`collapse navbar-collapse ${isCollapsed ? '' : 'show'}`}
-          id="navbarSupportedContent">
+        <div
+          className={`collapse navbar-collapse ${isCollapsed ? '' : 'show'}`}
+          id="navbarSupportedContent"
+        >
           <Scrollspy
-            items={tabs.map(s => s.href)}
+            items={tabs.map((s) => s.href)}
             currentClassName="active"
             offset={-300}
             className="navbar-nav"
