@@ -1,10 +1,12 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 import config from '../../config';
 import Layout from '../components/Layout';
 import Sidebar from '../components/Sidebar';
 
 const IndexPage = () => {
-  const [darkTheme, setDarkTheme] = useState(false);
+  const [darkTheme, setDarkTheme] = useState(
+    typeof window !== 'undefined' && localStorage.getItem('theme') === 'dark'
+  );
 
   const toggleDarkTheme = () => {
     const toggle = !darkTheme;
@@ -12,10 +14,6 @@ const IndexPage = () => {
     setDarkTheme(toggle);
     localStorage.setItem('theme', toggle ? 'dark' : 'light');
   };
-
-  useEffect(() => {
-    setDarkTheme(localStorage.getItem('theme') === 'dark');
-  }, []);
 
   return (
     <Layout>
