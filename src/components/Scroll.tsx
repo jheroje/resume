@@ -15,7 +15,7 @@ const Scroll = ({ type, element, offset, timeout, children }: ScrollType) => {
     smoothscroll.polyfill();
   }, []);
 
-  const handleClick = (e) => {
+  const handleClick = (e: Event) => {
     e.preventDefault();
 
     if (type && element) {
@@ -30,13 +30,13 @@ const Scroll = ({ type, element, offset, timeout, children }: ScrollType) => {
     }
   };
 
-  const handleKeyboard = (e) => {
+  const handleKeyboard = (e: KeyboardEvent) => {
     if (e.key === 'Enter' || e.key === ' ') {
       handleClick(e);
     }
   };
 
-  const scrollTo = (element, offSet = 0, timeout = null) => {
+  const scrollTo = (element: Element, offSet = 0, timeout = null) => {
     const elemPos: number =
       element?.getBoundingClientRect().top + window.pageYOffset ?? 0;
 

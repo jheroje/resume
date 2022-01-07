@@ -23,6 +23,12 @@ module.exports = {
       url: 'https://www.linkedin.com/in/javier-hernandez-ojeda-1932abb8/',
     },
   ],
+  tabs: [
+    { content: 'About', href: 'about' },
+    { content: 'Experience', href: 'experience' },
+    { content: 'Education', href: 'education' },
+    { content: 'Skills', href: 'skills' },
+  ],
   email: 'javierho93@gmail.com',
   address: 'Las Palmas de Gran Canaria',
 };

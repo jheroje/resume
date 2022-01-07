@@ -4,13 +4,6 @@ import config from '../../config';
 import Scroll from './Scroll';
 import ThemeContext from './theme/ThemeContext';
 
-const TABS = [
-  { content: 'About', href: 'about' },
-  { content: 'Experience', href: 'experience' },
-  { content: 'Education', href: 'education' },
-  { content: 'Skills', href: 'skills' },
-];
-
 const Sidebar = () => {
   const { darkTheme } = useContext(ThemeContext);
 
@@ -20,7 +13,7 @@ const Sidebar = () => {
     setIsCollapsed(!isCollapsed);
   };
 
-  const { firstName, lastName } = config;
+  const { firstName, lastName, tabs } = config;
 
   return (
     <nav
@@ -52,12 +45,12 @@ const Sidebar = () => {
         id="navbarSupportedContent"
       >
         <Scrollspy
-          items={TABS.map(({ href }) => href)}
+          items={tabs.map(({ href }) => href)}
           currentClassName="active"
           offset={-300}
           className="navbar-nav"
         >
-          {TABS.map(({ href, content }) => (
+          {tabs.map(({ href, content }) => (
             <li className="nav-item" key={href}>
               <Scroll type="id" element={href}>
                 <a className="nav-link" href={`#${href}`}>
