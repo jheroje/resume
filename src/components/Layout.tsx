@@ -5,7 +5,7 @@ import Helmet from 'react-helmet';
 import '../assets/sass/resume.scss';
 
 type LayoutProps = {
-  children: JSX.Element | JSX.Element[];
+  children?: JSX.Element | JSX.Element[];
 };
 
 const Layout = ({ children }: LayoutProps) => (
@@ -37,7 +37,7 @@ const Layout = ({ children }: LayoutProps) => (
 );
 
 Layout.propTypes = {
-  children: PropTypes.node.isRequired,
+  children: PropTypes.node,
 };
 
 export default Layout;
