@@ -1,12 +1,9 @@
-import React, { useContext, useState } from 'react';
+import React, { useState } from 'react';
 import Scrollspy from 'react-scrollspy';
 import config from '../../config';
 import Scroll from './Scroll';
-import ThemeContext from './theme/ThemeContext';
 
 const Sidebar = () => {
-  const { darkTheme } = useContext(ThemeContext);
-
   const [isCollapsed, setIsCollapsed] = useState(true);
 
   const toggleNavbar = () => {
@@ -17,9 +14,7 @@ const Sidebar = () => {
 
   return (
     <nav
-      className={`navbar navbar-expand-lg navbar-dark bg-primary fixed-top ${
-        darkTheme ? 'dark-theme' : ''
-      }`}
+      className="navbar navbar-expand-lg navbar-dark bg-primary fixed-top"
       id="sideNav"
     >
       <a className="navbar-brand" tabIndex={-1} href="#page-top">

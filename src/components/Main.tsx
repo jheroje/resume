@@ -1,16 +1,13 @@
-import React, { useContext } from 'react';
+import React from 'react';
 import config from '../../config';
 import ResumeItem from './resume/ResumeItem';
 import ResumeSection from './resume/ResumeSection';
-import ThemeContext from './theme/ThemeContext';
 
 const Main = () => {
-  const { darkTheme } = useContext(ThemeContext);
-
   const { firstName, lastName, address, email, socialLinks } = config;
 
   return (
-    <div className={`container-fluid p-0 ${darkTheme ? 'dark-theme' : ''}`}>
+    <div className="container-fluid p-0">
       <ResumeSection id="about">
         <h1 className="mb-0">
           {firstName}

@@ -1,25 +1,30 @@
 import React, { createContext, useState } from 'react';
 import PropTypes from 'prop-types';
 
-type ThemeProviderProps = {
-  children: JSX.Element | JSX.Element[];
-};
+const getThemeIcon = (dark: boolean) => (dark ? '🌖' : '🌘');
+const getThemeString = (dark: boolean) => (dark ? 'dark' : 'light');
 
 const ThemeContext = createContext({
   darkTheme: false,
   toggleDarkTheme: () => {},
+  getThemeIcon,
+  getThemeString,
 });
+
+type ThemeProviderProps = {
+  children: JSX.Element | JSX.Element[];
+};
 
 export const ThemeProvider = ({ children }: ThemeProviderProps) => {
   const [darkTheme, setDarkTheme] = useState(
-    localStorage.getItem('theme') === 'dark'
+    localStorage.getItem('theme') === getThemeString(true)
   );
 
   const toggleDarkTheme = () => {
     const toggle = !darkTheme;
 
     setDarkTheme(toggle);
-    localStorage.setItem('theme', toggle ? 'dark' : 'light');
+    localStorage.setItem('theme', getThemeString(toggle));
   };
 
   return (
@@ -27,6 +32,8 @@ export const ThemeProvider = ({ children }: ThemeProviderProps) => {
       value={{
         darkTheme,
         toggleDarkTheme,
+        getThemeIcon,
+        getThemeString,
       }}
     >
       {children}

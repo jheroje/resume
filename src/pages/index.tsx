@@ -8,17 +8,15 @@ import { ThemeProvider } from '../components/theme/ThemeContext';
 const browser = typeof window !== 'undefined';
 
 const IndexPage = () => {
-  return (
-    <Layout>
-      {browser ? ( // defer theme rendering to the browser to prevent hard refresh messing
-        <ThemeProvider>
-          <ThemeButton />
-          <Sidebar />
-          <Main />
-        </ThemeProvider>
-      ) : null}
-    </Layout>
-  );
+  return browser ? ( // defer theme rendering to the browser to prevent hard refresh messing
+    <ThemeProvider>
+      <Layout>
+        <ThemeButton />
+        <Sidebar />
+        <Main />
+      </Layout>
+    </ThemeProvider>
+  ) : null;
 };
 
 export default IndexPage;

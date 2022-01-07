@@ -89,13 +89,8 @@ p.lead {
   border: 2px solid black;
   background: white;
 
-  &.dark-theme {
-    border-color: white;
-    filter: hue-rotate(0deg);
-  }
-
   &:focus {
-    background: #efca08;
+    background: $yellow;
   }
 }
 
@@ -112,8 +107,11 @@ p.lead {
 .navbar,
 .container-fluid {
   transition: filter 0.3s ease;
+}
 
-  &.dark-theme {
+[data-theme='dark'] {
+  .navbar,
+  .container-fluid {
     filter: invert(1) hue-rotate(280deg);
   }
 }
