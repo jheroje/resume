@@ -5,7 +5,7 @@ import Helmet from 'react-helmet';
 import '../assets/sass/resume.scss';
 
 type LayoutProps = {
-  children: JSX.Element;
+  children: JSX.Element | JSX.Element[];
 };
 
 const Layout = ({ children }: LayoutProps) => (
