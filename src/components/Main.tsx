@@ -1,7 +1,7 @@
 import React, { useContext } from 'react';
 import config from '../../config';
-import ResumeItem from './ResumeItem';
-import ResumeSection from './ResumeSection';
+import ResumeItem from './resume/ResumeItem';
+import ResumeSection from './resume/ResumeSection';
 import ThemeContext from './theme/ThemeContext';
 
 const Main = () => {
