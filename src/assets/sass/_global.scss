@@ -149,6 +149,7 @@ p.lead {
 
   &:focus,
   &:hover {
+    outline: 1px solid white;
     background: $yellow;
   }
 }
