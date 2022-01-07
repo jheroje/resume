@@ -3,7 +3,9 @@
 body {
   @include body-font;
   padding-top: 54px;
+
   color: $gray-800;
+  transition: color 0.3s ease;
 }
 @media (min-width: 992px) {
   body {
@@ -21,7 +23,9 @@ h6 {
   @include heading-font;
   font-weight: 700;
   text-transform: uppercase;
+
   color: $gray-900;
+  transition: color 0.3s ease;
 }
 
 h1 {
@@ -44,6 +48,8 @@ p.lead {
 
 .subheading {
   color: $gray-700;
+  transition: color 0.3s ease;
+
   text-transform: uppercase;
   font-weight: 500;
   @include heading-font;
@@ -55,8 +61,11 @@ p.lead {
     display: inline-block;
     height: 3.5rem;
     width: 3.5rem;
+
     background-color: $gray-800;
     color: $white !important;
+    transition: background-color 0.3s ease, color 0.3s ease;
+
     border-radius: 100%;
     text-align: center;
     font-size: 1.5rem;
@@ -73,10 +82,61 @@ p.lead {
 
 .dev-icons {
   font-size: 3rem;
+
   .list-inline-item i {
+    transition: color 0.3s ease;
+
     &:hover {
       color: $primary;
     }
+  }
+}
+
+.container-fluid {
+  background-color: $gray-100;
+  transition: background-color 0.3s ease;
+}
+
+[data-theme='dark'] {
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    color: $gray-300;
+  }
+
+  p,
+  li {
+    color: $gray-400;
+  }
+
+  .subheading {
+    color: $gray-500;
+  }
+
+  .social-icons {
+    a {
+      background-color: $gray-400;
+      color: $black !important;
+      &:hover {
+        background-color: $indigo;
+      }
+    }
+  }
+
+  .dev-icons {
+    .list-inline-item i {
+      color: $gray-400;
+      &:hover {
+        color: $indigo;
+      }
+    }
+  }
+
+  .container-fluid {
+    background: $gray-1000;
   }
 }
 
@@ -97,21 +157,5 @@ p.lead {
 @media (max-width: 992px) {
   .dark-theme-button {
     top: 65px;
-  }
-}
-
-.container-fluid {
-  background: #eee;
-}
-
-.navbar,
-.container-fluid {
-  transition: filter 0.3s ease;
-}
-
-[data-theme='dark'] {
-  .navbar,
-  .container-fluid {
-    filter: invert(1) hue-rotate(280deg);
   }
 }

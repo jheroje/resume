@@ -1,3 +1,9 @@
+.bg-primary,
+.text-primary,
+a {
+  transition: all 0.3s ease;
+}
+
 .bg-primary {
   background-color: $primary !important;
 }
@@ -8,9 +14,29 @@
 
 a {
   color: $primary;
+
   &:hover,
   &:focus,
   &:active {
     color: darken($primary, 15%);
+  }
+}
+
+[data-theme='dark'] {
+  .bg-primary {
+    background-color: $indigo !important;
+  }
+
+  .text-primary {
+    color: $indigo !important;
+  }
+
+  a {
+    color: $indigo;
+    &:hover,
+    &:focus,
+    &:active {
+      color: lighten($indigo, 15%);
+    }
   }
 }

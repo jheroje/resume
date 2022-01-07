@@ -5,10 +5,31 @@
     font-weight: 800;
     letter-spacing: 0.05rem;
     text-transform: uppercase;
+    transition: color 0.3s ease;
   }
   .navbar-toggler {
     &:focus {
-      outline-color: lighten($primary, 15%);
+      outline: 2.5px solid $gray-300;
+    }
+  }
+}
+
+[data-theme='dark'] {
+  #sideNav {
+    .navbar-brand {
+      color: $black;
+    }
+
+    .navbar-nav .nav-item .nav-link {
+      color: rgba(0, 0, 0, 0.5);
+    }
+
+    .navbar-nav .nav-item.active .nav-link {
+      color: $black;
+    }
+
+    .navbar-toggler {
+      filter: invert(1);
     }
   }
 }
@@ -27,14 +48,8 @@
     height: 100vh;
     .navbar-brand {
       display: flex;
-
       margin: auto auto 0;
       padding: 0.5rem;
-      .img-profile {
-        max-width: 10rem;
-        max-height: 10rem;
-        border: 0.5rem solid fade-out($white, 0.8);
-      }
     }
     .navbar-collapse {
       display: flex;
