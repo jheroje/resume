@@ -1,7 +1,13 @@
 import PropTypes from 'prop-types';
 import React from 'react';
 
-const ResumeSection = ({ id, title, children }) => (
+type ResumeSectionProps = {
+  id: string;
+  title?: string;
+  children?: JSX.Element | JSX.Element[];
+};
+
+const ResumeSection = ({ id, title, children }: ResumeSectionProps) => (
   <section
     className="resume-section p-3 p-lg-5 d-flex align-items-center"
     id={id}
@@ -15,7 +21,7 @@ const ResumeSection = ({ id, title, children }) => (
 
 ResumeSection.propTypes = {
   id: PropTypes.string.isRequired,
-  title: PropTypes.string.isRequired,
+  title: PropTypes.string,
   children: PropTypes.node,
 };
 

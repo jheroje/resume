@@ -1,7 +1,14 @@
-import React from 'react';
 import PropTypes from 'prop-types';
+import React from 'react';
 
-const ResumeItem = ({ title, where, when, children }) => (
+type ResumeItemProps = {
+  title: string;
+  where: string;
+  when: string;
+  children?: JSX.Element | JSX.Element[];
+};
+
+const ResumeItem = ({ title, where, when, children }: ResumeItemProps) => (
   <div className="resume-item d-flex flex-column flex-md-row justify-content-between mb-5">
     <div className="resume-content">
       <h3 className="mb-0">{title}</h3>

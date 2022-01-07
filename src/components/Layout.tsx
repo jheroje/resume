@@ -4,7 +4,11 @@ import React from 'react';
 import Helmet from 'react-helmet';
 import '../assets/sass/resume.scss';
 
-const Layout = ({ children }) => (
+type LayoutProps = {
+  children: JSX.Element;
+};
+
+const Layout = ({ children }: LayoutProps) => (
   <StaticQuery
     query={graphql`
       query SiteTitleQuery {

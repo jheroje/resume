@@ -2,7 +2,15 @@ import PropTypes from 'prop-types';
 import React, { useEffect } from 'react';
 import smoothscroll from 'smoothscroll-polyfill';
 
-const Scroll = ({ type, element, offset, timeout, children }) => {
+type ScrollType = {
+  type: string;
+  element: string;
+  offset?: number;
+  timeout?: number;
+  children: JSX.Element;
+};
+
+const Scroll = ({ type, element, offset, timeout, children }: ScrollType) => {
   useEffect(() => {
     smoothscroll.polyfill();
   }, []);
@@ -29,10 +37,14 @@ const Scroll = ({ type, element, offset, timeout, children }) => {
   };
 
   const scrollTo = (element, offSet = 0, timeout = null) => {
-    const elemPos =
+    const elemPos: number =
       element?.getBoundingClientRect().top + window.pageYOffset ?? 0;
 
-    const opts = { top: elemPos + offSet, left: 0, behavior: 'smooth' };
+    const opts: ScrollToOptions = {
+      top: elemPos + offSet,
+      left: 0,
+      behavior: 'smooth',
+    };
 
     if (timeout) {
       setTimeout(() => {
@@ -50,20 +62,12 @@ const Scroll = ({ type, element, offset, timeout, children }) => {
     onKeyDown: handleKeyboard,
   };
 
-  return (
-    <>
-      {typeof children === 'object' ? (
-        React.cloneElement(children, elementProps)
-      ) : (
-        <span {...elementProps}>{children}</span>
-      )}
-    </>
-  );
+  return React.cloneElement(children, elementProps);
 };
 
 Scroll.propTypes = {
-  type: PropTypes.string,
-  element: PropTypes.string,
+  type: PropTypes.string.isRequired,
+  element: PropTypes.string.isRequired,
   offset: PropTypes.number,
   timeout: PropTypes.number,
   children: PropTypes.node.isRequired,
