@@ -93,6 +93,10 @@ p.lead {
     border-color: white;
     filter: hue-rotate(0deg);
   }
+
+  &:focus {
+    background: #efca08;
+  }
 }
 
 @media (max-width: 992px) {

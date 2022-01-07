@@ -1,71 +1,72 @@
-import smoothscroll from 'smoothscroll-polyfill';
-import React from 'react';
 import PropTypes from 'prop-types';
+import React, { useEffect } from 'react';
+import smoothscroll from 'smoothscroll-polyfill';
 
-const Element = props => {
-  return props.children;
-};
-
-class Scroll extends React.Component {
-  static propTypes = {
-    type: PropTypes.string,
-    element: PropTypes.string,
-    offset: PropTypes.number,
-    timeout: PropTypes.number,
-    children: PropTypes.node.isRequired,
-  };
-  constructor() {
-    super();
-    this.handleClick = this.handleClick.bind(this);
-  }
-  componentDidMount() {
+const Scroll = ({ type, element, offset, timeout, children }) => {
+  useEffect(() => {
     smoothscroll.polyfill();
-  }
-  handleClick(e) {
+  }, []);
+
+  const handleClick = (e) => {
     e.preventDefault();
-    let elem = 0;
-    let scroll = true;
-    const { type, element, offset, timeout } = this.props;
+
     if (type && element) {
-      switch (type) {
-        case 'class':
-          elem = document.getElementsByClassName(element)[0];
-          scroll = elem ? true : false;
-          break;
-        case 'id':
-          elem = document.getElementById(element);
-          scroll = elem ? true : false;
-          break;
-        default:
-      }
+      const elem =
+        type === 'id'
+          ? document.getElementById(element)
+          : document.getElementsByClassName(element)[0];
+
+      elem
+        ? scrollTo(elem, offset, timeout)
+        : console.log(`Element not found: ${element}`);
     }
-    scroll
-      ? this.scrollTo(elem, offset, timeout)
-      : console.log(`Element not found: ${element}`); // eslint-disable-line
-  }
-  scrollTo(element, offSet = 0, timeout = null) {
-    const elemPos = element
-      ? element.getBoundingClientRect().top + window.pageYOffset
-      : 0;
+  };
+
+  const handleKeyboard = (e) => {
+    if (e.key === 'Enter' || e.key === ' ') {
+      handleClick(e);
+    }
+  };
+
+  const scrollTo = (element, offSet = 0, timeout = null) => {
+    const elemPos =
+      element?.getBoundingClientRect().top + window.pageYOffset ?? 0;
+
+    const opts = { top: elemPos + offSet, left: 0, behavior: 'smooth' };
+
     if (timeout) {
       setTimeout(() => {
-        window.scroll({ top: elemPos + offSet, left: 0, behavior: 'smooth' });
+        window.scroll(opts);
       }, timeout);
     } else {
-      window.scroll({ top: elemPos + offSet, left: 0, behavior: 'smooth' });
+      window.scroll(opts);
     }
-  }
-  render() {
-    return (
-      <Element>
-        {typeof this.props.children === 'object' ? (
-          React.cloneElement(this.props.children, { onClick: this.handleClick })
-        ) : (
-          <span onClick={this.handleClick}>{this.props.children}</span>
-        )}
-      </Element>
-    );
-  }
-}
+  };
+
+  const elementProps = {
+    role: 'button',
+    tabIndex: 0,
+    onClick: handleClick,
+    onKeyDown: handleKeyboard,
+  };
+
+  return (
+    <>
+      {typeof children === 'object' ? (
+        React.cloneElement(children, elementProps)
+      ) : (
+        <span {...elementProps}>{children}</span>
+      )}
+    </>
+  );
+};
+
+Scroll.propTypes = {
+  type: PropTypes.string,
+  element: PropTypes.string,
+  offset: PropTypes.number,
+  timeout: PropTypes.number,
+  children: PropTypes.node.isRequired,
+};
 
 export default Scroll;

@@ -29,7 +29,7 @@ const Sidebar = () => {
       }`}
       id="sideNav"
     >
-      <a className="navbar-brand" href="#page-top">
+      <a className="navbar-brand" tabIndex={-1} href="#page-top">
         <span className="d-block d-lg-none">
           {firstName} {lastName}
         </span>
