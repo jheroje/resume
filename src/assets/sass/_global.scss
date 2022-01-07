@@ -74,7 +74,9 @@ p.lead {
     &:last-child {
       margin-right: 0;
     }
-    &:hover {
+    &:hover,
+    &:focus,
+    &:active {
       background-color: $primary;
     }
   }
@@ -120,7 +122,9 @@ p.lead {
     a {
       background-color: $gray-400;
       color: $black !important;
-      &:hover {
+      &:hover,
+      &:focus,
+      &:active {
         background-color: $indigo;
       }
     }
@@ -149,7 +153,8 @@ p.lead {
   border: 2px solid black;
   background: white;
 
-  &:focus {
+  &:focus,
+  &:hover {
     background: $yellow;
   }
 }
