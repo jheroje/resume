@@ -1,22 +1,23 @@
 import React, { useContext } from 'react';
 import config from '../../config';
-import ResumeSection from './ResumeSection';
 import ResumeItem from './ResumeItem';
-import ThemeContext from './ThemeContext';
+import ResumeSection from './ResumeSection';
+import ThemeContext from './theme/ThemeContext';
 
 const Main = () => {
   const { darkTheme } = useContext(ThemeContext);
+
+  const { firstName, lastName, address, email, socialLinks } = config;
 
   return (
     <div className={`container-fluid p-0 ${darkTheme ? 'dark-theme' : ''}`}>
       <ResumeSection id="about">
         <h1 className="mb-0">
-          {config.firstName}
-          <span className="text-primary"> {config.lastName}</span>
+          {firstName}
+          <span className="text-primary"> {lastName}</span>
         </h1>
         <div className="subheading mb-5">
-          {config.address} ·
-          <a href={`mailto:${config.email}`}>{config.email}</a>
+          {address} ·<a href={`mailto:${email}`}>{email}</a>
         </div>
         <p className="lead mb-5">
           I am a passionate and versatile developer that will adapt quickly to
@@ -24,14 +25,11 @@ const Main = () => {
           quality.
         </p>
         <div className="social-icons">
-          {config.socialLinks.map((social) => {
-            const { icon, url } = social;
-            return (
-              <a key={url} href={url}>
-                <i className={`fab ${icon}`}></i>
-              </a>
-            );
-          })}
+          {socialLinks.map(({ icon, url }) => (
+            <a key={url} href={url}>
+              <i className={`fab ${icon}`}></i>
+            </a>
+          ))}
         </div>
       </ResumeSection>
 

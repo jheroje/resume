@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import React from 'react';
 
 const ResumeSection = ({ id, title, children }) => (
@@ -11,5 +12,11 @@ const ResumeSection = ({ id, title, children }) => (
     </div>
   </section>
 );
+
+ResumeSection.propTypes = {
+  id: PropTypes.string.isRequired,
+  title: PropTypes.string.isRequired,
+  children: PropTypes.node,
+};
 
 export default ResumeSection;

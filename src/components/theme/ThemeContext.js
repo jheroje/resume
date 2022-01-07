@@ -1,11 +1,11 @@
-import React, { useState } from 'react';
+import React, { createContext, useState } from 'react';
 
-const ThemeContext = React.createContext({
+const ThemeContext = createContext({
   darkTheme: false,
   toggleDarkTheme: () => {},
 });
 
-export const ThemeProvider = (props) => {
+export const ThemeProvider = ({ children }) => {
   const [darkTheme, setDarkTheme] = useState(
     localStorage.getItem('theme') === 'dark'
   );
@@ -24,8 +24,9 @@ export const ThemeProvider = (props) => {
         toggleDarkTheme,
       }}
     >
-      {props.children}
+      {children}
     </ThemeContext.Provider>
   );
 };
+
 export default ThemeContext;

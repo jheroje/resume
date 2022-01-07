@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 const ResumeItem = ({ title, where, when, children }) => (
   <div className="resume-item d-flex flex-column flex-md-row justify-content-between mb-5">
@@ -13,5 +14,12 @@ const ResumeItem = ({ title, where, when, children }) => (
     </div>
   </div>
 );
+
+ResumeItem.propTypes = {
+  title: PropTypes.string.isRequired,
+  where: PropTypes.string.isRequired,
+  when: PropTypes.string.isRequired,
+  children: PropTypes.node,
+};
 
 export default ResumeItem;
