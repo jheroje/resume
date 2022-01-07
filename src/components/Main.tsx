@@ -14,7 +14,10 @@ const Main = () => {
           <span className="text-primary"> {lastName}</span>
         </h1>
         <div className="subheading mb-5">
-          {address} ·<a href={`mailto:${email}`}>{email}</a>
+          <span className="address">{address}</span>
+          <a className="email" href={`mailto:${email}`}>
+            {email}
+          </a>
         </div>
         <p className="lead mb-5">
           I am a passionate and versatile developer that will adapt quickly to
