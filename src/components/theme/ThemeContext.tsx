@@ -1,4 +1,4 @@
-import React, { createContext, useState } from 'react';
+import React, { createContext, useEffect, useState } from 'react';
 import PropTypes from 'prop-types';
 
 const getThemeIcon = (dark: boolean) => (dark ? '🌖' : '🌘');
@@ -16,9 +16,11 @@ type ThemeProviderProps = {
 };
 
 export const ThemeProvider = ({ children }: ThemeProviderProps) => {
-  const [darkTheme, setDarkTheme] = useState(
-    localStorage.getItem('theme') === getThemeString(true)
-  );
+  const [darkTheme, setDarkTheme] = useState(false);
+
+  useEffect(() => {
+    setDarkTheme(localStorage.getItem('theme') === getThemeString(true));
+  }, []);
 
   const toggleDarkTheme = () => {
     const toggle = !darkTheme;
