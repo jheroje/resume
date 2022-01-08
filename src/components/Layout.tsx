@@ -33,6 +33,10 @@ const Layout = ({ children }: LayoutProps) => {
             ]}
           >
             <html lang="en" />
+            <meta
+              http-equiv="Content-Security-Policy"
+              content="default-src 'self'; style-src 'self' https://fonts.googleapis.com/;"
+            />
           </Helmet>
 
           <div className="main-body" data-theme={getThemeString(darkTheme)}>
