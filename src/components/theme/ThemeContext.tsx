@@ -36,7 +36,7 @@ export const ThemeProvider = ({ children }: ThemeProviderProps) => {
         getThemeString,
       }}
     >
-      {children}
+      <div data-theme={getThemeString(darkTheme)}>{children}</div>
     </ThemeContext.Provider>
   );
 };
