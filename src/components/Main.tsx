@@ -25,8 +25,14 @@ const Main = () => {
           quality.
         </p>
         <div className="social-icons">
-          {socialLinks.map(({ icon, url }) => (
-            <a key={url} href={url}>
+          {socialLinks.map(({ name, url, icon }) => (
+            <a
+              key={url}
+              href={url}
+              aria-label={name}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               <i className={`fab ${icon}`}></i>
             </a>
           ))}

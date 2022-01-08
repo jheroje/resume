@@ -17,11 +17,14 @@ const Sidebar = () => {
       className="navbar navbar-expand-lg navbar-dark bg-primary fixed-top"
       id="sideNav"
     >
-      <a className="navbar-brand" tabIndex={-1} href="#page-top">
-        <span className="d-block d-lg-none">
-          {firstName} {lastName}
-        </span>
-      </a>
+      <span className="navbar-brand">
+        <Scroll type="class" element="main-body">
+          <a className="d-block d-lg-none" href="#top">
+            {firstName} {lastName}
+          </a>
+        </Scroll>
+      </span>
+
       <button
         className={`navbar-toggler navbar-toggler-right ${
           isCollapsed ? 'collapsed' : ''
