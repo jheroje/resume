@@ -166,8 +166,8 @@ const Main = () => {
           when="April 2015 - June 2015"
         >
           <p>
-            Development of "Visit Gozo", built on esri maps, through their
-            framework ArcGIS.
+            Development of <strong>Visit Gozo</strong>, built on esri maps,
+            through their framework ArcGIS.
           </p>
           <p>
             Maps, layers, points of interest and routes served via REST api.
