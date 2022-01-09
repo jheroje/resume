@@ -1,3 +1,5 @@
+/* eslint-disable */
+
 module.exports = {
   siteTitle: 'Javier Hernandez Ojeda', // <title>
   manifestName: 'Resume',
@@ -7,10 +9,9 @@ module.exports = {
   manifestThemeColor: '#20c997',
   manifestDisplay: 'standalone',
   manifestIcon: 'src/assets/img/website-icon.png',
-  pathPrefix: `/resume/`, // This path is subpath of your hosting https://domain/portfolio
+  pathPrefix: '/resume/', // This path is subpath of your hosting https://domain/portfolio
   firstName: 'Javier',
   lastName: 'Hernandez Ojeda',
-  // social
   socialLinks: [
     {
       icon: 'fa-github',

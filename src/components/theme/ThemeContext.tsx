@@ -6,7 +6,7 @@ const getThemeString = (dark: boolean) => (dark ? 'dark' : 'light');
 
 const ThemeContext = createContext({
   darkTheme: false,
-  toggleDarkTheme: () => {},
+  toggleDarkTheme: () => undefined,
   getThemeIcon,
   getThemeString,
 });
