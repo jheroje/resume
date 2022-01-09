@@ -98,7 +98,7 @@ const Main = () => {
           <ul>
             <li>Vaccine management system</li>
             <li>Security and emergencies management system</li>
-            <li>Government&apos;s document and data management system</li>
+            <li>Government{"'"}s document and data management system</li>
             <li>Internal tools and libraries</li>
           </ul>
 
