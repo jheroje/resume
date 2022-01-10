@@ -99,7 +99,7 @@ p.lead {
       &:hover,
       &:focus,
       &:active {
-        background-color: $cyan;
+        background-color: $magenta;
       }
     }
   }
@@ -107,7 +107,7 @@ p.lead {
   .dev-icons {
     .list-inline-item i {
       &:hover {
-        color: $cyan;
+        color: $magenta;
       }
     }
   }

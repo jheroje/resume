@@ -24,19 +24,19 @@ a {
 
 [data-theme='morning'] {
   .bg-primary {
-    background-color: $cyan !important;
+    background-color: $magenta !important;
   }
 
   .text-primary {
-    color: $cyan !important;
+    color: $magenta !important;
   }
 
   a {
-    color: $cyan;
+    color: $magenta;
     &:hover,
     &:focus,
     &:active {
-      color: lighten($cyan, 15%);
+      color: lighten($magenta, 15%);
     }
   }
 }

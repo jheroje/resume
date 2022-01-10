@@ -24,7 +24,7 @@ export const Themes: ThemeInfo = {
     next: Theme.MORNING,
     icon: '🌘',
     colors: {
-      primary: '#20c997',
+      primary: '#1cb386',
     },
   },
   [Theme.MORNING]: {
@@ -32,7 +32,7 @@ export const Themes: ThemeInfo = {
     next: Theme.NAVY,
     icon: '🌗',
     colors: {
-      primary: '#17a2b8',
+      primary: '#922D50',
     },
   },
   [Theme.NAVY]: {
