@@ -1,5 +1,4 @@
 import React, { useContext } from 'react';
-import { ThemeInfo } from './Theme';
 import ThemeContext from './ThemeContext';
 
 const ThemeButton = () => {
@@ -7,7 +6,7 @@ const ThemeButton = () => {
 
   return (
     <button type="button" className="dark-theme-button" onClick={toggleTheme}>
-      Toggle dark theme {ThemeInfo[theme].icon}
+      Toggle dark theme {theme.icon}
     </button>
   );
 };

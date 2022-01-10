@@ -4,16 +4,29 @@ enum Theme {
   DARK = 'dark',
 }
 
-export const ThemeInfo = {
+export type ThemeProps = {
+  current: Theme;
+  next: Theme;
+  icon: string;
+};
+
+export type ThemeInfo = {
+  [key: string]: ThemeProps;
+};
+
+export const ThemeData: ThemeInfo = {
   [Theme.LIGHT]: {
+    current: Theme.LIGHT,
     next: Theme.NAVY,
     icon: '🌘',
   },
   [Theme.NAVY]: {
+    current: Theme.NAVY,
     next: Theme.DARK,
     icon: '🌗',
   },
   [Theme.DARK]: {
+    current: Theme.DARK,
     next: Theme.LIGHT,
     icon: '🌖',
   },
