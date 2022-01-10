@@ -1,26 +1,6 @@
 import React, { createContext, useState } from 'react';
 import PropTypes from 'prop-types';
-
-enum Theme {
-  LIGHT = 'light',
-  NAVY = 'navy',
-  DARK = 'dark',
-}
-
-export const ThemeOptions = {
-  [Theme.LIGHT]: {
-    next: Theme.NAVY,
-    icon: '🌘',
-  },
-  [Theme.NAVY]: {
-    next: Theme.DARK,
-    icon: '🌗',
-  },
-  [Theme.DARK]: {
-    next: Theme.LIGHT,
-    icon: '🌖',
-  },
-};
+import Theme, { ThemeInfo } from './Theme';
 
 const getStoredTheme = (): Theme => {
   const storedTheme = localStorage.getItem('theme') as Theme;
@@ -41,7 +21,7 @@ export const ThemeProvider = ({ children }: ThemeProviderProps) => {
   const [theme, setTheme] = useState(getStoredTheme());
 
   const toggleTheme = () => {
-    const nextTheme = ThemeOptions[theme]?.next;
+    const nextTheme = ThemeInfo[theme]?.next;
 
     setTheme(nextTheme);
     localStorage.setItem('theme', nextTheme);
