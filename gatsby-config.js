@@ -18,6 +18,7 @@ module.exports = {
         theme_color: config.manifestThemeColor,
         display: config.manifestDisplay,
         icon: config.manifestIcon, // This path is relative to the root of the site.
+        theme_color_in_head: false, // This will avoid adding theme-color meta tag.
       },
     },
     'gatsby-plugin-sass',
