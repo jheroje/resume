@@ -1,6 +1,6 @@
 import React, { createContext, useState } from 'react';
 import PropTypes from 'prop-types';
-import Theme, { ThemeData, ThemeProps } from './Theme';
+import Theme, { Themes, ThemeProps } from './Theme';
 
 const getStoredTheme = (): ThemeProps => {
   const storedTheme = localStorage.getItem('theme') as Theme;
@@ -9,11 +9,11 @@ const getStoredTheme = (): ThemeProps => {
     ? storedTheme
     : Theme.LIGHT;
 
-  return ThemeData[theme];
+  return Themes[theme];
 };
 
 const ThemeContext = createContext({
-  theme: ThemeData.light,
+  theme: Themes.light,
   toggleTheme: () => undefined,
 });
 
@@ -27,7 +27,7 @@ export const ThemeProvider = ({ children }: ThemeProviderProps) => {
   const toggleTheme = () => {
     const { next } = theme;
 
-    setTheme(ThemeData[next]);
+    setTheme(Themes[next]);
     localStorage.setItem('theme', next);
   };
 

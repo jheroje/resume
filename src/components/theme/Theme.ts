@@ -14,7 +14,7 @@ export type ThemeInfo = {
   [key: string]: ThemeProps;
 };
 
-export const ThemeData: ThemeInfo = {
+export const Themes: ThemeInfo = {
   [Theme.LIGHT]: {
     current: Theme.LIGHT,
     next: Theme.NAVY,
