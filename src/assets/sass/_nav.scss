@@ -43,6 +43,26 @@
   }
 }
 
+[data-theme='navy'] {
+  #sideNav {
+    .navbar-brand a {
+      color: $navy;
+    }
+
+    .navbar-nav .nav-item .nav-link {
+      color: rgba(0, 0, 0, 0.5);
+    }
+
+    .navbar-nav .nav-item.active .nav-link {
+      color: $navy;
+    }
+
+    .navbar-toggler {
+      filter: invert(1);
+    }
+  }
+}
+
 @media (min-width: 992px) {
   #sideNav {
     text-align: center;

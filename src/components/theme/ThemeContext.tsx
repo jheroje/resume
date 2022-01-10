@@ -1,14 +1,36 @@
 import React, { createContext, useState } from 'react';
 import PropTypes from 'prop-types';
 
-const getThemeIcon = (dark: boolean) => (dark ? '🌖' : '🌘');
-const getThemeString = (dark: boolean) => (dark ? 'dark' : 'light');
+enum Theme {
+  LIGHT = 'light',
+  NAVY = 'navy',
+  DARK = 'dark',
+}
+
+export const ThemeOptions = {
+  [Theme.LIGHT]: {
+    next: Theme.NAVY,
+    icon: '🌘',
+  },
+  [Theme.NAVY]: {
+    next: Theme.DARK,
+    icon: '🌗',
+  },
+  [Theme.DARK]: {
+    next: Theme.LIGHT,
+    icon: '🌖',
+  },
+};
+
+const getStoredTheme = (): Theme => {
+  const storedTheme = localStorage.getItem('theme') as Theme;
+
+  return Object.values(Theme).includes(storedTheme) ? storedTheme : Theme.LIGHT;
+};
 
 const ThemeContext = createContext({
-  darkTheme: false,
-  toggleDarkTheme: () => undefined,
-  getThemeIcon,
-  getThemeString,
+  theme: Theme.LIGHT,
+  toggleTheme: () => undefined,
 });
 
 type ThemeProviderProps = {
@@ -16,27 +38,23 @@ type ThemeProviderProps = {
 };
 
 export const ThemeProvider = ({ children }: ThemeProviderProps) => {
-  const [darkTheme, setDarkTheme] = useState(
-    localStorage.getItem('theme') === getThemeString(true)
-  );
+  const [theme, setTheme] = useState(getStoredTheme());
 
-  const toggleDarkTheme = () => {
-    const toggle = !darkTheme;
+  const toggleTheme = () => {
+    const nextTheme = ThemeOptions[theme]?.next;
 
-    setDarkTheme(toggle);
-    localStorage.setItem('theme', getThemeString(toggle));
+    setTheme(nextTheme);
+    localStorage.setItem('theme', nextTheme);
   };
 
   return (
     <ThemeContext.Provider
       value={{
-        darkTheme,
-        toggleDarkTheme,
-        getThemeIcon,
-        getThemeString,
+        theme,
+        toggleTheme,
       }}
     >
-      <div data-theme={getThemeString(darkTheme)}>{children}</div>
+      <div data-theme={theme}>{children}</div>
     </ThemeContext.Provider>
   );
 };

@@ -40,3 +40,22 @@ a {
     }
   }
 }
+
+[data-theme='navy'] {
+  .bg-primary {
+    background-color: $ocre !important;
+  }
+
+  .text-primary {
+    color: $ocre !important;
+  }
+
+  a {
+    color: $ocre;
+    &:hover,
+    &:focus,
+    &:active {
+      color: lighten($ocre, 15%);
+    }
+  }
+}

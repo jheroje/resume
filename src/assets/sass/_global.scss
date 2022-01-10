@@ -138,6 +138,51 @@ p.lead {
   }
 }
 
+[data-theme='navy'] {
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    color: $gray-300;
+  }
+
+  p,
+  li {
+    color: $gray-400;
+  }
+
+  .subheading {
+    color: $gray-500;
+  }
+
+  .social-icons {
+    a {
+      background-color: $gray-400;
+      color: $navy !important;
+      &:hover,
+      &:focus,
+      &:active {
+        background-color: $ocre;
+      }
+    }
+  }
+
+  .dev-icons {
+    .list-inline-item i {
+      color: $gray-400;
+      &:hover {
+        color: $ocre;
+      }
+    }
+  }
+
+  .container-fluid {
+    background: $navy;
+  }
+}
+
 .dark-theme-button {
   position: fixed;
   top: 10px;
