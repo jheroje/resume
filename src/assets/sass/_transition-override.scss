@@ -1,0 +1,4 @@
+// Stop theme transition on load
+body.preload * {
+  transition: none !important;
+}

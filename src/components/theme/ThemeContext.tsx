@@ -1,15 +1,14 @@
-import React, { createContext, useState } from 'react';
+import React, { createContext, useEffect, useState } from 'react';
 import PropTypes from 'prop-types';
 import Theme, { Themes, ThemeProps } from './Theme';
 
 const getStoredTheme = (): ThemeProps => {
-  const storedTheme = localStorage.getItem('theme') as Theme;
+  const storedTheme =
+    typeof window !== 'undefined' && (localStorage.getItem('theme') as Theme);
 
-  const theme = Object.values(Theme).includes(storedTheme)
-    ? storedTheme
-    : Theme.LIGHT;
-
-  return Themes[theme];
+  return storedTheme && Object.values(Theme).includes(storedTheme)
+    ? Themes[storedTheme]
+    : Themes.light;
 };
 
 const ThemeContext = createContext({
@@ -22,7 +21,11 @@ type ThemeProviderProps = {
 };
 
 export const ThemeProvider = ({ children }: ThemeProviderProps) => {
-  const [theme, setTheme] = useState(getStoredTheme());
+  const [theme, setTheme] = useState(Themes.light);
+
+  useEffect(() => {
+    setTheme(getStoredTheme());
+  }, []);
 
   const toggleTheme = () => {
     const { next } = theme;
@@ -38,7 +41,7 @@ export const ThemeProvider = ({ children }: ThemeProviderProps) => {
         toggleTheme,
       }}
     >
-      <div data-theme={theme.current}>{children}</div>
+      {children}
     </ThemeContext.Provider>
   );
 };

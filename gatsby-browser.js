@@ -9,9 +9,9 @@ import Layout from './src/components/Layout';
 import { ThemeProvider } from './src/components/theme/ThemeContext';
 
 export const wrapRootElement = ({ element }) => {
-  return <Layout>{element}</Layout>;
+  return <ThemeProvider>{element}</ThemeProvider>;
 };
 
 export const wrapPageElement = ({ element }) => {
-  return <ThemeProvider>{element}</ThemeProvider>;
+  return <Layout>{element}</Layout>;
 };
