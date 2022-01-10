@@ -1,5 +1,6 @@
 enum Theme {
   LIGHT = 'light',
+  MORNING = 'morning',
   NAVY = 'navy',
   DARK = 'dark',
 }
@@ -20,16 +21,24 @@ export type ThemeInfo = {
 export const Themes: ThemeInfo = {
   [Theme.LIGHT]: {
     current: Theme.LIGHT,
-    next: Theme.NAVY,
+    next: Theme.MORNING,
     icon: '🌘',
     colors: {
       primary: '#20c997',
     },
   },
+  [Theme.MORNING]: {
+    current: Theme.MORNING,
+    next: Theme.NAVY,
+    icon: '🌗',
+    colors: {
+      primary: '#17a2b8',
+    },
+  },
   [Theme.NAVY]: {
     current: Theme.NAVY,
     next: Theme.DARK,
-    icon: '🌗',
+    icon: '🌖',
     colors: {
       primary: '#ffcc66',
     },
@@ -37,7 +46,7 @@ export const Themes: ThemeInfo = {
   [Theme.DARK]: {
     current: Theme.DARK,
     next: Theme.LIGHT,
-    icon: '🌖',
+    icon: '🌕',
     colors: {
       primary: '#6a4ddf',
     },

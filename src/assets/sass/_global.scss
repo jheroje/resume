@@ -93,6 +93,30 @@ p.lead {
   transition: background-color 0.3s ease;
 }
 
+[data-theme='morning'] {
+  .social-icons {
+    a {
+      &:hover,
+      &:focus,
+      &:active {
+        background-color: $cyan;
+      }
+    }
+  }
+
+  .dev-icons {
+    .list-inline-item i {
+      &:hover {
+        color: $cyan;
+      }
+    }
+  }
+
+  .container-fluid {
+    background: #fdefd4;
+  }
+}
+
 [data-theme='dark'] {
   h1,
   h2,

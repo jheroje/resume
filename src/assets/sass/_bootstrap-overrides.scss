@@ -22,6 +22,25 @@ a {
   }
 }
 
+[data-theme='morning'] {
+  .bg-primary {
+    background-color: $cyan !important;
+  }
+
+  .text-primary {
+    color: $cyan !important;
+  }
+
+  a {
+    color: $cyan;
+    &:hover,
+    &:focus,
+    &:active {
+      color: lighten($cyan, 15%);
+    }
+  }
+}
+
 [data-theme='dark'] {
   .bg-primary {
     background-color: $indigo !important;
