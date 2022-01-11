@@ -17,29 +17,3 @@ jobs:
           access-token: ${{ secrets.PAT }}
           deploy-branch: master
           gatsby-args: --prefix-paths
-#       - uses: actions/checkout@v2
-#         with:
-#             repository: jheroje/resume
-#             token: ${{ secrets.PAT }}
-      
-#       - name: Setup Node.js
-#         uses: actions/setup-node@v2
-#         with:
-#           node-version: '16'
-      
-#       - name: Cache dependencies
-#         uses: actions/cache@v2
-#         with:
-#           path: ~/.npm
-#           key: npm-${{ hashFiles('package-lock.json') }}
-#           restore-keys: npm-
-
-#       - name: Install dependencies
-#         run: npm ci
-        
-#       - name: Deploy to Github Pages
-#         run: |
-#           git config user.name "$(git log -n 1 --pretty=format:%an)"
-#           git config user.email "$(git log -n 1 --pretty=format:%ae)"
-#           git remote set-url origin https://github.com/jheroje/resume.git
-#           npm run deploy
