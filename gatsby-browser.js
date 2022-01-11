@@ -6,10 +6,12 @@
 
 import React from 'react';
 import Layout from './src/components/Layout';
-import { ThemeProvider } from './src/components/theme/ThemeContext';
+import ThemeProvider from './src/components/theme/ThemeProvider';
 
 export const wrapRootElement = ({ element }) => {
-  return <ThemeProvider>{element}</ThemeProvider>;
+  const storedTheme = localStorage.getItem('theme');
+
+  return <ThemeProvider storedTheme={storedTheme}>{element}</ThemeProvider>;
 };
 
 export const wrapPageElement = ({ element }) => {
