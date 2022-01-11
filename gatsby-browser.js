@@ -17,3 +17,13 @@ export const wrapRootElement = ({ element }) => {
 export const wrapPageElement = ({ element }) => {
   return <Layout>{element}</Layout>;
 };
+
+export const onRouteUpdate = () => {
+  navigator.serviceWorker.register('/sw.js').then((reg) => {
+    reg.update();
+  });
+};
+
+export const onServiceWorkerUpdateReady = () => {
+  window.location.reload(true);
+};
