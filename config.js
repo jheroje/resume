@@ -5,8 +5,8 @@ module.exports = {
   manifestName: 'Resume',
   manifestShortName: 'Resume', // max 12 characters
   manifestStartUrl: '/',
-  manifestBackgroundColor: '#20c997',
-  manifestThemeColor: '#20c997',
+  manifestBackgroundColor: '#1cb386',
+  manifestThemeColor: '#1cb386',
   manifestDisplay: 'standalone',
   manifestIcon: 'src/assets/img/website-icon.png',
   pathPrefix: '/resume/', // This path is subpath of your hosting https://domain/portfolio
