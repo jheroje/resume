@@ -36,7 +36,9 @@ const Layout = ({ children }: LayoutProps) => {
             <html lang="en" />
           </Helmet>
 
-          <div data-theme={theme.current}>{children}</div>
+          <div className="main-body" data-theme={theme.current}>
+            {children}
+          </div>
         </>
       )}
     />
