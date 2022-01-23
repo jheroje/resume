@@ -53,7 +53,7 @@ const Main = () => {
             <li>Javascript, Typescript, Node</li>
             <li>Next, React, Redux</li>
             <li>PostgreSQL, Redis, Knex, Objection</li>
-            <li>AWS</li>
+            <li>AWS, Docker, Kubernetes, CircleCI</li>
           </ul>
         </ResumeItem>
 
