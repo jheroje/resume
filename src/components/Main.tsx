@@ -53,7 +53,7 @@ const Main = () => {
             <li>Javascript, Typescript, Node</li>
             <li>Next, React, Redux</li>
             <li>PostgreSQL, Redis, Knex, Objection</li>
-            <li>AWS, Docker, Kubernetes, CircleCI</li>
+            <li>AWS, Docker, Kubernetes, CircleCI, Terraform</li>
           </ul>
         </ResumeItem>
 
@@ -132,6 +132,7 @@ const Main = () => {
             <li>Javascript, Typescript</li>
             <li>Angular</li>
             <li>Python</li>
+            <li>GCP, Docker, Kubernetes</li>
           </ul>
 
           <p>
@@ -230,6 +231,9 @@ const Main = () => {
             <i className="fab fa-js-square"></i>
           </li>
           <li className="list-inline-item">
+            <i className="fab fa-sass"></i>
+          </li>
+          <li className="list-inline-item">
             <i className="fab fa-angular"></i>
           </li>
           <li className="list-inline-item">
@@ -239,22 +243,28 @@ const Main = () => {
             <i className="fab fa-node-js"></i>
           </li>
           <li className="list-inline-item">
-            <i className="fab fa-sass"></i>
-          </li>
-          <li className="list-inline-item">
             <i className="fab fa-npm"></i>
           </li>
           <li className="list-inline-item">
-            <i className="fab fa-java"></i>
+            <i className="fab fa-git-alt"></i>
+          </li>
+          <li className="list-inline-item">
+            <i className="fab fa-docker"></i>
+          </li>
+          <li className="list-inline-item">
+            <i className="fab fa-aws"></i>
           </li>
           <li className="list-inline-item">
             <i className="fab fa-android"></i>
           </li>
           <li className="list-inline-item">
-            <i className="fab fa-python"></i>
+            <i className="fab fa-apple"></i>
           </li>
           <li className="list-inline-item">
-            <i className="fab fa-git-alt"></i>
+            <i className="fab fa-java"></i>
+          </li>
+          <li className="list-inline-item">
+            <i className="fab fa-python"></i>
           </li>
         </ul>
       </ResumeSection>
