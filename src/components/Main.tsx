@@ -50,7 +50,7 @@ const Main = () => {
           <p>Tech stack:</p>
           <ul>
             <li>AWS, Serverless Framework</li>
-            <li>JS, Node, Python</li>
+            <li>Javascript, Node, Python</li>
           </ul>
           
           <p>Competences:</p>
