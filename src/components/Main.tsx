@@ -43,9 +43,28 @@ const Main = () => {
 
       <ResumeSection id="experience" title="Experience">
         <ResumeItem
+          title="DevOps Engineer"
+          where="Pentaquark"
+          when="July 2022 - August 2022"
+        >
+          <p>Tech stack:</p>
+          <ul>
+            <li>AWS, Serverless Framework</li>
+            <li>JS, Node, Python</li>
+          </ul>
+          
+          <p>Competences:</p>
+          <ul>
+            <li>Architecture definition and implementation for serverless ML processes</li>
+            <li>AWS accounts setup and administration</li>
+            <li>Mentoring and review of application code</li>
+          </ul>
+        </ResumeItem>
+        
+        <ResumeItem
           title="Full Stack Developer"
           where="Insendi"
-          when="April 2021 - Present"
+          when="April 2021 - June 2022"
         >
           <p>Development of learning platform for universities.</p>
           <p>Tech stack:</p>
@@ -54,6 +73,15 @@ const Main = () => {
             <li>Next, React, Redux</li>
             <li>PostgreSQL, Redis, Knex, Objection</li>
             <li>AWS, Docker, Kubernetes, CircleCI, Terraform</li>
+          </ul>
+          
+          <p>Competences:</p>
+          <ul>
+            <li>Participated in the whole scope of the application, from activities and learning management to the platform underneath</li>
+            <li>Vast improvements in the fluidity of the interface and performance of the application in general</li>
+            <li>Solved vulnerabilities and removed tech debt across the platform</li>
+            <li>Participated in the Cloud Foundations teams redefining tools, architecture, infrastructure and devops practices</li>
+            <li>Mentoring product team developers and introducing them to all the new concepts and processes</li>
           </ul>
         </ResumeItem>
 
