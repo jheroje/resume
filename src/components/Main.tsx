@@ -43,6 +43,19 @@ const Main = () => {
 
       <ResumeSection id="experience" title="Experience">
         <ResumeItem
+          title="Software Engineer"
+          where="Joyn"
+          when="August 2022 - Present"
+        >
+          <p>VOD and live TV streaming</p>
+          <p>Tech stack:</p>
+          <ul>
+            <li>Javascript, Typescript, Node</li>
+            <li>AWS, Kafka</li>
+          </ul>
+        </ResumeItem>
+        
+        <ResumeItem
           title="DevOps Engineer"
           where="Pentaquark"
           when="July 2022 - August 2022"
