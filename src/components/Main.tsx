@@ -93,7 +93,7 @@ const Main = () => {
             <li>Contributed to the whole scope of the application, from activities and learning management to the platform underneath</li>
             <li>Vast improvements in the fluidity of the interface and performance of the application in general</li>
             <li>Solved vulnerabilities and removed tech debt across the platform</li>
-            <li>Participated in the Cloud Foundations teams redefining tools, architecture, infrastructure and devops practices</li>
+            <li>Participated in the Cloud Foundations team redefining tools, architecture, infrastructure and devops practices</li>
             <li>Mentoring product team developers and introducing them to all the new concepts and processes</li>
           </ul>
         </ResumeItem>
