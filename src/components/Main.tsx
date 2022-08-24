@@ -51,6 +51,7 @@ const Main = () => {
           <p>Tech stack:</p>
           <ul>
             <li>Javascript, Typescript, Node</li>
+            <li>Next, React, GraphQL</li>
             <li>AWS, Kafka</li>
           </ul>
         </ResumeItem>
