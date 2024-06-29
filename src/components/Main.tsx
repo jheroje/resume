@@ -263,7 +263,8 @@ const Main = () => {
             <li>HTML, CSS, JavaScript</li>
             <li>Node, Java, PHP</li>
             <li>SQL, MySQL</li>
-            <li>Interfaces, Usabilty, Accesibility</li>
+            <li>Interfaces, Usability, Accessibility</li>
+            <li>Git</li>
           </ul>
         </ResumeItem>
       </ResumeSection>
