@@ -47,12 +47,22 @@ const Main = () => {
           where="Joyn"
           when="August 2022 - Present"
         >
-          <p>VOD and live TV streaming</p>
+          <p><strong>VOD and live TV streaming service</strong></p>
+
           <p>Tech stack:</p>
           <ul>
             <li>Javascript, Typescript, Node</li>
-            <li>Next, React, GraphQL</li>
-            <li>AWS, Kafka</li>
+            <li>React, Next, NestJS, GraphQL</li>
+            <li>AWS, Kafka, Serverless, Terraform, Docker</li>
+            <li>PostgreSQL, DynamoDB, Redis</li>
+            <li>Algolia</li>
+          </ul>
+
+          <p>Competences:</p>
+          <ul>
+            <li>Development of the internal tool for content management, curation and promotion</li>
+            <li>Generation of catalogs and feeds for integration and discoverability from external partners such as Google, Amazon Fire TV, Apple TV, Samsung TV, Sky, Magenta TV, TiVo, Vidaa, and more</li>
+            <li>Maintenance and improvement of the content search</li>
           </ul>
         </ResumeItem>
         
@@ -61,12 +71,14 @@ const Main = () => {
           where="Pentaquark"
           when="July 2022 - August 2022"
         >
+          <p><strong>AI/ML consulting company</strong></p>
+
           <p>Tech stack:</p>
           <ul>
-            <li>AWS, Serverless Framework</li>
-            <li>Javascript, Node, Python</li>
+            <li>Javascript, Typescript, Node, Python</li>
+            <li>AWS, Serverless</li>
           </ul>
-          
+
           <p>Competences:</p>
           <ul>
             <li>Architecture definition and implementation for serverless ML processes</li>
@@ -80,7 +92,8 @@ const Main = () => {
           where="Insendi"
           when="April 2021 - June 2022"
         >
-          <p>Development of learning platform for universities.</p>
+          <p><strong>Learning platform for universities</strong></p>
+
           <p>Tech stack:</p>
           <ul>
             <li>Javascript, Typescript, Node</li>
@@ -88,7 +101,7 @@ const Main = () => {
             <li>PostgreSQL, Redis, Knex, Objection</li>
             <li>AWS, Docker, Kubernetes, CircleCI, Terraform</li>
           </ul>
-          
+
           <p>Competences:</p>
           <ul>
             <li>Contributed to the whole scope of the application, from activities and learning management to the platform underneath</li>
@@ -102,9 +115,10 @@ const Main = () => {
         <ResumeItem
           title="Front End Developer"
           where="ITGallery"
-          when="February 2021 - March 2021"
+          when="February 2021 - April 2021"
         >
-          <p>Development of software for art galleries, museums and artists.</p>
+          <p><strong>Software for art galleries, museums and artists</strong></p>
+
           <p>Tech stack:</p>
           <ul>
             <li>Javascript, Typescript</li>
@@ -126,7 +140,8 @@ const Main = () => {
           where="Desic"
           when="April 2018 - October 2020"
         >
-          <p>Development of applications for the public administration.</p>
+          <p><strong>Development of applications for the public administration</strong></p>
+          
           <p>Tech stack:</p>
           <ul>
             <li>Java, Javascript</li>
@@ -148,18 +163,10 @@ const Main = () => {
           <ul>
             <li>Migration of projects from Subversion to Git</li>
             <li>Help onboard, mentor and review junior devs</li>
-            <li>
-              Responsible of the renovation and customization of styles and
-              themes of the applications
-            </li>
-            <li>
-              Refactoring of great part of the code to reusable components
-            </li>
+            <li>Responsible of the renovation and customization of styles and themes of the applications</li>
+            <li>Refactoring of great part of the code to reusable components</li>
             <li>In charge of deployments, user support</li>
-            <li>
-              Participation in the process of deployment automation and the
-              introduction of tools like Docker
-            </li>
+            <li>Participation in the process of deployment automation and the introduction of tools like Docker</li>
             <li>Maintenance and support of Redmine plugins</li>
           </ul>
         </ResumeItem>
@@ -169,6 +176,8 @@ const Main = () => {
           where="Edosoft Factory"
           when="October 2017 - March 2018"
         >
+          <p><strong>General consulting company</strong></p>
+
           <p>Tech stack:</p>
           <ul>
             <li>Javascript, Typescript</li>
@@ -177,21 +186,13 @@ const Main = () => {
             <li>GCP, Docker, Kubernetes</li>
           </ul>
 
-          <p>
-            Development of Angular and Node/Python applications on Google Cloud
-            Platform (App Engine, Compute Engine, Kubernetes)
-          </p>
-          <p>
-            Big data analysis with BigQuery and Python libraries like Scrapy.
-          </p>
-          <p>
-            Following Agile methodologies like Scrum and Kanban, hand in hand
-            with TDD.
-          </p>
-          <p>
-            Use of Google Machine Learning APIs like Vision and Natural
-            Language.
-          </p>
+          <p>Competences:</p>
+          <ul>
+            <li>Development of Angular and Node/Python applications on Google Cloud Platform (App Engine, Compute Engine, Kubernetes)</li>
+            <li>Big data analysis with BigQuery and Python libraries like Scrapy</li>
+            <li>Following Agile methodologies like Scrum and Kanban, hand in hand with TDD</li>
+            <li>Use of Google Machine Learning APIs like Vision and Natural Language</li>
+          </ul>
         </ResumeItem>
 
         <ResumeItem
@@ -199,8 +200,12 @@ const Main = () => {
           where="Welovroi"
           when="April 2016 - June 2016"
         >
-          <p>CRM on Ruby on Rails.</p>
-          <p>Data stored on MongoDB through Mongoid ORM.</p>
+          <p><strong>CRM for ROI and KPIs tracking and management</strong></p>
+
+          <ul>
+            <li>CRM on Ruby on Rails</li>
+            <li>Data stored on MongoDB through Mongoid ORM</li>
+          </ul>
         </ResumeItem>
 
         <ResumeItem
@@ -208,14 +213,13 @@ const Main = () => {
           where="Geosys"
           when="April 2015 - June 2015"
         >
-          <p>
-            Development of <strong>Visit Gozo</strong>, built on esri maps,
-            through their framework ArcGIS.
-          </p>
-          <p>
-            Maps, layers, points of interest and routes served via REST api.
-          </p>
-          <p>iOS version written in Swift, Android version written in Java.</p>
+          <p><strong>Map based applications</strong></p>
+
+          <ul>
+            <li>Development of <strong>Visit Gozo</strong>, built on esri maps, through their framework ArcGIS</li>
+            <li>Maps, layers, points of interest and routes served via REST api</li>
+            <li>iOS version written in Swift, Android version written in Java</li>
+          </ul>
         </ResumeItem>
       </ResumeSection>
 
@@ -227,34 +231,40 @@ const Main = () => {
           where="EOI"
           when="March 2017 - June 2017"
         >
-          <p>JavaScript, Jquery</p>
-          <p>Angular</p>
-          <p>SASS</p>
-          <p>UI/UX</p>
-          <p>Git</p>
-          <p>Layout</p>
+          <ul>
+            <li>JavaScript, Jquery</li>
+            <li>Angular</li>
+            <li>SASS</li>
+            <li>UI/UX</li>
+            <li>Git</li>
+            <li>Layout</li>
+          </ul>
         </ResumeItem>
 
         <ResumeItem
           title="Cross Platfrom Applications Development"
           where="IES El Rincón"
-          when="September 2015 - April 2016"
+          when="September 2015 - June 2016"
         >
-          <p>C#, Java</p>
-          <p>Android</p>
-          <p>Unity 3D</p>
-          <p>Dynamics NAV</p>
+          <ul>
+            <li>C#, Java</li>
+            <li>Android</li>
+            <li>Unity 3D</li>
+            <li>Dynamics NAV</li>
+          </ul>
         </ResumeItem>
 
         <ResumeItem
           title="Web Applications Development"
           where="IES El Rincón"
-          when="September 2013 - April 2015"
+          when="September 2013 - June 2015"
         >
-          <p>HTML, CSS, JavaScript</p>
-          <p>Node, Java, PHP</p>
-          <p>SQL, MySQL</p>
-          <p>Interfaces, Usabilty, Accesibility</p>
+          <ul>
+            <li>HTML, CSS, JavaScript</li>
+            <li>Node, Java, PHP</li>
+            <li>SQL, MySQL</li>
+            <li>Interfaces, Usabilty, Accesibility</li>
+          </ul>
         </ResumeItem>
       </ResumeSection>
 
