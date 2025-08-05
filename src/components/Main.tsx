@@ -43,7 +43,7 @@ const Main = () => {
 
       <ResumeSection id="experience" title="Experience">
         <ResumeItem
-          title="Software Engineer"
+          title="Senior Software Engineer"
           where="Joyn"
           when="August 2022 - Present"
         >
