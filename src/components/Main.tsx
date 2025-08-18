@@ -20,9 +20,9 @@ const Main = () => {
           </a>
         </div>
         <p className="lead mb-5">
-          I am a passionate and versatile developer that will adapt quickly to
-          any environment and provide solutions focused on efficiency and
-          quality.
+          I am a passionate and versatile developer who quickly adapts to new environments and delivers solutions that prioritize efficiency and quality. 
+          Skilled across front-end, back-end, architecture, and infrastructure, with a strong interest in Developer Experience (DX) and DevOps. 
+          I thrive in product-focused companies where I can contribute to building impactful, high-quality solutions.
         </p>
         <div className="social-icons">
           {socialLinks.map(({ name, url, icon }) => (
@@ -62,6 +62,9 @@ const Main = () => {
           <ul>
             <li>Development of the internal tool for content management, curation and promotion</li>
             <li>Generation of catalogs and feeds for integration and discoverability from external partners such as Google, Amazon Fire TV, Apple TV, Samsung TV, Sky, Magenta TV, TiVo, Vidaa, and more</li>
+            <li>Implementation of layout curation tool to integrate Joyn content into partner's platforms</li>
+            <li>Collaboration with multiple teams through the whole content pipeline from raw metadata to the user</li>
+            <li>Close cooperation with product and design teams</li>
             <li>Maintenance and improvement of the content search</li>
           </ul>
         </ResumeItem>
