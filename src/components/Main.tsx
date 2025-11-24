@@ -46,11 +46,14 @@ const Main = () => {
       <ResumeSection id="experience" title="Experience">
         <ResumeItem
           title="Senior Software Engineer"
-          where="Joyn"
+          where="Joyn - ProSiebenSat.1 Media"
           when="August 2022 - October 2025"
         >
           <p>
-            <strong>VOD and live TV streaming service</strong>
+            <strong>
+              VOD and live TV streaming service for the leading media company in
+              the DACH region
+            </strong>
           </p>
 
           <p>Tech stack:</p>
