@@ -1,4 +1,3 @@
-import React from 'react';
 import config from '../config';
 import ResumeItem from './resume/ResumeItem';
 import ResumeSection from './resume/ResumeSection';

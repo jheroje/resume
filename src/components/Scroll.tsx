@@ -1,5 +1,4 @@
-import PropTypes from 'prop-types';
-import React, { useEffect } from 'react';
+import { cloneElement, useEffect } from 'react';
 import smoothscroll from 'smoothscroll-polyfill';
 
 type ScrollType = {
@@ -7,7 +6,7 @@ type ScrollType = {
   element: string;
   offset?: number;
   timeout?: number;
-  children: JSX.Element;
+  children: React.ReactElement;
 };
 
 const Scroll = ({ type, element, offset, timeout, children }: ScrollType) => {
@@ -36,9 +35,9 @@ const Scroll = ({ type, element, offset, timeout, children }: ScrollType) => {
     }
   };
 
-  const scrollTo = (element: Element, offSet = 0, timeout = null) => {
+  const scrollTo = (element: Element, offSet = 0, timeout: number | null | undefined = null) => {
     const elemPos: number =
-      element?.getBoundingClientRect().top + window.pageYOffset ?? 0;
+      (element?.getBoundingClientRect().top ?? 0) + window.pageYOffset;
 
     const opts: ScrollToOptions = {
       top: elemPos + offSet,
@@ -62,15 +61,9 @@ const Scroll = ({ type, element, offset, timeout, children }: ScrollType) => {
     onKeyDown: handleKeyboard,
   };
 
-  return React.cloneElement(children, elementProps);
+  return cloneElement(children, elementProps);
 };
 
-Scroll.propTypes = {
-  type: PropTypes.string.isRequired,
-  element: PropTypes.string.isRequired,
-  offset: PropTypes.number,
-  timeout: PropTypes.number,
-  children: PropTypes.node.isRequired,
-};
+
 
 export default Scroll;

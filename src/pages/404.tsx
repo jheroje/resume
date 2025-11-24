@@ -1,5 +1,3 @@
-import React from 'react';
-
 const IndexPage = () => (
   <div className="container-fluid p-0">
     <section

@@ -1,11 +1,10 @@
-import React, { useEffect, useState } from 'react';
-import PropTypes from 'prop-types';
+import { useEffect, useState } from 'react';
 import { Themes } from './Theme';
 import ThemeContext from './ThemeContext';
 
 type ThemeProviderProps = {
   storedTheme: string;
-  children: JSX.Element | JSX.Element[];
+  children: React.ReactNode;
 };
 
 const ThemeProvider = ({ storedTheme, children }: ThemeProviderProps) => {
@@ -34,9 +33,6 @@ const ThemeProvider = ({ storedTheme, children }: ThemeProviderProps) => {
   );
 };
 
-ThemeProvider.propTypes = {
-  storedTheme: PropTypes.string,
-  children: PropTypes.node.isRequired,
-};
+
 
 export default ThemeProvider;

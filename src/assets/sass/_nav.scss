@@ -1,3 +1,5 @@
+@use 'variables' as *;
+
 #sideNav {
   z-index: 1;
 
@@ -16,6 +18,11 @@
     text-transform: uppercase;
     transition: color 0.3s ease;
   }
+
+  .navbar-nav .nav-item.active .nav-link {
+    color: $white;
+  }
+
   .navbar-toggler {
     &:focus {
       outline: 2.5px solid $gray-300;
@@ -75,11 +82,13 @@
 
     width: $sidebar-base-width;
     height: 100vh;
+
     .navbar-brand {
       display: flex;
       margin: auto auto 0;
       padding: 0.5rem;
     }
+
     .navbar-collapse {
       display: flex;
       align-items: flex-start;
@@ -87,12 +96,15 @@
 
       width: 100%;
       margin-bottom: auto;
+
       .navbar-nav {
         flex-direction: column;
 
         width: 100%;
+
         .nav-item {
           display: block;
+
           .nav-link {
             display: block;
           }

@@ -1,3 +1,6 @@
+@use 'variables' as *;
+@use 'mixins' as *;
+
 // Global styling for this template
 
 body {
@@ -65,9 +68,11 @@ p.lead {
     font-size: 1.5rem;
     line-height: 3.5rem;
     margin-right: 1rem;
+
     &:last-child {
       margin-right: 0;
     }
+
     &:hover,
     &:focus,
     &:active {
@@ -96,6 +101,7 @@ p.lead {
 [data-theme='morning'] {
   .social-icons {
     a {
+
       &:hover,
       &:focus,
       &:active {
@@ -118,6 +124,7 @@ p.lead {
 }
 
 [data-theme='dark'] {
+
   h1,
   h2,
   h3,
@@ -140,6 +147,7 @@ p.lead {
     a {
       background-color: $gray-400;
       color: $black !important;
+
       &:hover,
       &:focus,
       &:active {
@@ -151,6 +159,7 @@ p.lead {
   .dev-icons {
     .list-inline-item i {
       color: $gray-400;
+
       &:hover {
         color: $indigo;
       }
@@ -163,6 +172,7 @@ p.lead {
 }
 
 [data-theme='navy'] {
+
   h1,
   h2,
   h3,
@@ -185,6 +195,7 @@ p.lead {
     a {
       background-color: $gray-400;
       color: $navy !important;
+
       &:hover,
       &:focus,
       &:active {
@@ -196,6 +207,7 @@ p.lead {
   .dev-icons {
     .list-inline-item i {
       color: $gray-400;
+
       &:hover {
         color: $ocre;
       }

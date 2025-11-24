@@ -28,15 +28,15 @@ export interface Config {
 }
 
 const config: Config = {
-  siteTitle: 'Javier Hernandez Ojeda', // <title>
+  siteTitle: 'Javier Hernandez Ojeda',
   manifestName: 'Resume',
-  manifestShortName: 'Resume', // max 12 characters
+  manifestShortName: 'Resume',
   manifestStartUrl: '/',
   manifestBackgroundColor: '#1cb386',
   manifestThemeColor: '#1cb386',
   manifestDisplay: 'standalone',
   manifestIcon: 'src/assets/img/website-icon.png',
-  pathPrefix: '/resume/', // This path is subpath of your hosting https://domain/portfolio
+  pathPrefix: '/resume/',
   firstName: 'Javier',
   lastName: 'Hernandez Ojeda',
   socialLinks: [

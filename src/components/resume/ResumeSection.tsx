@@ -1,10 +1,7 @@
-import PropTypes from 'prop-types';
-import React from 'react';
-
 type ResumeSectionProps = {
   id: string;
   title?: string;
-  children?: JSX.Element | JSX.Element[];
+  children?: React.ReactNode;
 };
 
 const ResumeSection = ({ id, title, children }: ResumeSectionProps) => (
@@ -19,10 +16,6 @@ const ResumeSection = ({ id, title, children }: ResumeSectionProps) => (
   </section>
 );
 
-ResumeSection.propTypes = {
-  id: PropTypes.string.isRequired,
-  title: PropTypes.string,
-  children: PropTypes.node,
-};
+
 
 export default ResumeSection;

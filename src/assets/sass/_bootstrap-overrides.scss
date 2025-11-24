@@ -1,3 +1,6 @@
+@use 'sass:color';
+@use 'variables' as *;
+
 .bg-primary,
 .text-primary,
 a {
@@ -18,7 +21,7 @@ a {
   &:hover,
   &:focus,
   &:active {
-    color: darken($primary, 15%);
+    color: color.adjust($primary, $lightness: -15%);
   }
 }
 
@@ -33,10 +36,11 @@ a {
 
   a {
     color: $magenta;
+
     &:hover,
     &:focus,
     &:active {
-      color: lighten($magenta, 15%);
+      color: color.adjust($magenta, $lightness: 15%);
     }
   }
 }
@@ -52,10 +56,11 @@ a {
 
   a {
     color: $indigo;
+
     &:hover,
     &:focus,
     &:active {
-      color: lighten($indigo, 15%);
+      color: color.adjust($indigo, $lightness: 15%);
     }
   }
 }
@@ -71,10 +76,11 @@ a {
 
   a {
     color: $ocre;
+
     &:hover,
     &:focus,
     &:active {
-      color: lighten($ocre, 15%);
+      color: color.adjust($ocre, $lightness: 15%);
     }
   }
 }

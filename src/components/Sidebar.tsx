@@ -1,5 +1,5 @@
-import React, { useState } from 'react';
-import Scrollspy from 'react-scrollspy';
+import { useState } from 'react';
+import { useScrollSpy } from '../hooks/useScrollSpy';
 import config from '../config';
 import Scroll from './Scroll';
 
@@ -11,6 +11,8 @@ const Sidebar = () => {
   };
 
   const { firstName, lastName, tabs } = config;
+
+  const activeId = useScrollSpy(tabs.map(({ href }) => href));
 
   return (
     <nav
@@ -42,14 +44,12 @@ const Sidebar = () => {
         className={`collapse navbar-collapse ${isCollapsed ? '' : 'show'}`}
         id="navbarSupportedContent"
       >
-        <Scrollspy
-          items={tabs.map(({ href }) => href)}
-          currentClassName="active"
-          offset={-300}
-          className="navbar-nav"
-        >
+        <ul className="navbar-nav">
           {tabs.map(({ href, content }) => (
-            <li className="nav-item" key={href}>
+            <li
+              className={`nav-item ${activeId === href ? 'active' : ''}`}
+              key={href}
+            >
               <Scroll type="id" element={href}>
                 <a className="nav-link" href={`#${href}`}>
                   {content}
@@ -57,7 +57,7 @@ const Sidebar = () => {
               </Scroll>
             </li>
           ))}
-        </Scrollspy>
+        </ul>
       </div>
     </nav>
   );

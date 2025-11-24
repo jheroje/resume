@@ -1,11 +1,8 @@
-import PropTypes from 'prop-types';
-import React from 'react';
-
 type ResumeItemProps = {
   title: string;
   where: string;
   when: string;
-  children?: JSX.Element | JSX.Element[];
+  children?: React.ReactNode;
 };
 
 const ResumeItem = ({ title, where, when, children }: ResumeItemProps) => (
@@ -22,11 +19,6 @@ const ResumeItem = ({ title, where, when, children }: ResumeItemProps) => (
   </div>
 );
 
-ResumeItem.propTypes = {
-  title: PropTypes.string.isRequired,
-  where: PropTypes.string.isRequired,
-  when: PropTypes.string.isRequired,
-  children: PropTypes.node,
-};
+
 
 export default ResumeItem;
