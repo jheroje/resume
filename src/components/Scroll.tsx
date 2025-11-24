@@ -23,9 +23,11 @@ const Scroll = ({ type, element, offset, timeout, children }: ScrollType) => {
           ? document.getElementById(element)
           : document.getElementsByClassName(element)[0];
 
-      elem
-        ? scrollTo(elem, offset, timeout)
-        : console.log(`Element not found: ${element}`);
+      if (elem) {
+        scrollTo(elem, offset, timeout);
+      } else {
+        console.log(`Element not found: ${element}`);
+      }
     }
   };
 

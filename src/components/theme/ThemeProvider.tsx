@@ -8,11 +8,13 @@ type ThemeProviderProps = {
 };
 
 const ThemeProvider = ({ storedTheme, children }: ThemeProviderProps) => {
-  const [theme, setTheme] = useState(Themes.light);
+  const [theme, setTheme] = useState(
+    storedTheme ? Themes[storedTheme] : Themes.light
+  );
 
   useEffect(() => {
-    setTheme(storedTheme ? Themes[storedTheme] : Themes.light);
-  }, []);
+    document.documentElement.setAttribute('data-theme', theme.current);
+  }, [theme]);
 
   const toggleTheme = () => {
     const { next } = theme;
@@ -22,17 +24,10 @@ const ThemeProvider = ({ storedTheme, children }: ThemeProviderProps) => {
   };
 
   return (
-    <ThemeContext.Provider
-      value={{
-        theme,
-        toggleTheme,
-      }}
-    >
+    <ThemeContext.Provider value={{ theme, toggleTheme }}>
       {children}
     </ThemeContext.Provider>
   );
 };
-
-
 
 export default ThemeProvider;
