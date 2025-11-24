@@ -13,7 +13,6 @@
   "scripts": {
     "develop": "gatsby develop",
     "build": "npm run clean && gatsby build",
-    "deploy": "npm run clean && gatsby build --prefix-paths && gh-pages -d public -b master",
     "serve": "gatsby serve",
     "clean": "rimraf .cache public",
     "format": "prettier --write '**/*.(js|ts|tsx|scss)'",
@@ -41,7 +40,6 @@
     "@typescript-eslint/parser": "^5.62.0",
     "eslint": "^8.57.0",
     "eslint-plugin-react": "^7.34.0",
-    "gh-pages": "^3.2.3",
     "prettier": "^2.8.8",
     "rimraf": "^3.0.2",
     "ts-node": "^10.9.2"
