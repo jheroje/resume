@@ -1,6 +1,33 @@
-/* eslint-disable */
+export interface SocialLink {
+  icon: string;
+  name: string;
+  url: string;
+}
 
-module.exports = {
+export interface Tab {
+  content: string;
+  href: string;
+}
+
+export interface Config {
+  siteTitle: string;
+  manifestName: string;
+  manifestShortName: string;
+  manifestStartUrl: string;
+  manifestBackgroundColor: string;
+  manifestThemeColor: string;
+  manifestDisplay: string;
+  manifestIcon: string;
+  pathPrefix: string;
+  firstName: string;
+  lastName: string;
+  socialLinks: SocialLink[];
+  tabs: Tab[];
+  email: string;
+  address: string;
+}
+
+const config: Config = {
   siteTitle: 'Javier Hernandez Ojeda', // <title>
   manifestName: 'Resume',
   manifestShortName: 'Resume', // max 12 characters
@@ -33,3 +60,5 @@ module.exports = {
   email: 'javierho93@gmail.com',
   address: 'Las Palmas de Gran Canaria',
 };
+
+export default config;

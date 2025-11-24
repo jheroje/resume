@@ -1,7 +1,7 @@
-/* eslint-disable */
-const config = require('./config');
+import config from './src/config';
+import type { GatsbyConfig } from 'gatsby';
 
-module.exports = {
+const gatsbyConfig: GatsbyConfig = {
   pathPrefix: config.pathPrefix,
   siteMetadata: {
     title: config.siteTitle,
@@ -21,8 +21,15 @@ module.exports = {
         theme_color_in_head: false, // This will avoid adding theme-color meta tag.
       },
     },
-    'gatsby-plugin-sass',
+    {
+      resolve: 'gatsby-plugin-sass',
+      options: {
+        implementation: require('sass'),
+      },
+    },
     'gatsby-plugin-offline',
     'gatsby-plugin-htaccess',
   ],
 };
+
+export default gatsbyConfig;
