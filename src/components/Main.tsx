@@ -51,8 +51,7 @@ const Main = () => {
         >
           <p>
             <strong>
-              VOD and live TV streaming service for the leading media company in
-              the DACH region
+              VOD & Live TV Streaming – Leading Media Company in DACH Region
             </strong>
           </p>
 
