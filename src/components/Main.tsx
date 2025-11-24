@@ -45,7 +45,7 @@ const Main = () => {
         <ResumeItem
           title="Senior Software Engineer"
           where="Joyn"
-          when="August 2022 - Present"
+          when="August 2022 - October 2025"
         >
           <p><strong>VOD and live TV streaming service</strong></p>
 
