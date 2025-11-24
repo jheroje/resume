@@ -1,8 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import IndexPage from './pages/index';
-import ThemeProvider from './components/theme/ThemeProvider';
 import './assets/sass/resume.scss';
+import ThemeProvider from './components/theme/ThemeProvider';
+import IndexPage from './pages/index';
 
 const storedTheme = localStorage.getItem('theme') || 'light';
 

@@ -19,9 +19,12 @@ const Main = () => {
           </a>
         </div>
         <p className="lead mb-5">
-          I am a passionate and versatile developer who quickly adapts to new environments and delivers solutions that prioritize efficiency and quality. 
-          Skilled across front-end, back-end, architecture, and infrastructure, with a strong interest in Developer Experience (DX) and DevOps. 
-          I thrive in product-focused companies where I can contribute to building impactful, high-quality solutions.
+          I am a passionate and versatile developer who quickly adapts to new
+          environments and delivers solutions that prioritize efficiency and
+          quality. Skilled across front-end, back-end, architecture, and
+          infrastructure, with a strong interest in Developer Experience (DX)
+          and DevOps. I thrive in product-focused companies where I can
+          contribute to building impactful, high-quality solutions.
         </p>
         <div className="social-icons">
           {socialLinks.map(({ name, url, icon }) => (
@@ -46,7 +49,9 @@ const Main = () => {
           where="Joyn"
           when="August 2022 - October 2025"
         >
-          <p><strong>VOD and live TV streaming service</strong></p>
+          <p>
+            <strong>VOD and live TV streaming service</strong>
+          </p>
 
           <p>Tech stack:</p>
           <ul>
@@ -59,21 +64,36 @@ const Main = () => {
 
           <p>Competences:</p>
           <ul>
-            <li>Development of the internal tool for content management, curation and promotion</li>
-            <li>Generation of catalogs and feeds for integration and discoverability from external partners such as Google, Amazon Fire TV, Apple TV, Samsung TV, Sky, Magenta TV, TiVo, Vidaa, and more</li>
-            <li>Implementation of layout curation tool to integrate Joyn content into partner's platforms</li>
-            <li>Collaboration with multiple teams through the whole content pipeline from raw metadata to the user</li>
+            <li>
+              Development of the internal tool for content management, curation
+              and promotion
+            </li>
+            <li>
+              Generation of catalogs and feeds for integration and
+              discoverability from external partners such as Google, Amazon Fire
+              TV, Apple TV, Samsung TV, Sky, Magenta TV, TiVo, Vidaa, and more
+            </li>
+            <li>
+              Implementation of layout curation tool to integrate Joyn content
+              into partner's platforms
+            </li>
+            <li>
+              Collaboration with multiple teams through the whole content
+              pipeline from raw metadata to the user
+            </li>
             <li>Close cooperation with product and design teams</li>
             <li>Maintenance and improvement of the content search</li>
           </ul>
         </ResumeItem>
-        
+
         <ResumeItem
           title="DevOps Engineer"
           where="Pentaquark"
           when="July 2022 - August 2022"
         >
-          <p><strong>AI/ML consulting company</strong></p>
+          <p>
+            <strong>AI/ML consulting company</strong>
+          </p>
 
           <p>Tech stack:</p>
           <ul>
@@ -83,18 +103,23 @@ const Main = () => {
 
           <p>Competences:</p>
           <ul>
-            <li>Architecture definition and implementation for serverless ML processes</li>
+            <li>
+              Architecture definition and implementation for serverless ML
+              processes
+            </li>
             <li>AWS accounts setup and administration</li>
             <li>Mentoring and review of application code</li>
           </ul>
         </ResumeItem>
-        
+
         <ResumeItem
           title="Full Stack Developer"
           where="Insendi"
           when="April 2021 - June 2022"
         >
-          <p><strong>Learning platform for universities</strong></p>
+          <p>
+            <strong>Learning platform for universities</strong>
+          </p>
 
           <p>Tech stack:</p>
           <ul>
@@ -106,11 +131,25 @@ const Main = () => {
 
           <p>Competences:</p>
           <ul>
-            <li>Contributed to the whole scope of the application, from activities and learning management to the platform underneath</li>
-            <li>Vast improvements in the fluidity of the interface and performance of the application in general</li>
-            <li>Solved vulnerabilities and removed tech debt across the platform</li>
-            <li>Participated in the Cloud Foundations team redefining tools, architecture, infrastructure and devops practices</li>
-            <li>Mentoring product team developers and introducing them to all the new concepts and processes</li>
+            <li>
+              Contributed to the whole scope of the application, from activities
+              and learning management to the platform underneath
+            </li>
+            <li>
+              Vast improvements in the fluidity of the interface and performance
+              of the application in general
+            </li>
+            <li>
+              Solved vulnerabilities and removed tech debt across the platform
+            </li>
+            <li>
+              Participated in the Cloud Foundations team redefining tools,
+              architecture, infrastructure and devops practices
+            </li>
+            <li>
+              Mentoring product team developers and introducing them to all the
+              new concepts and processes
+            </li>
           </ul>
         </ResumeItem>
 
@@ -119,7 +158,9 @@ const Main = () => {
           where="ITGallery"
           when="February 2021 - April 2021"
         >
-          <p><strong>Software for art galleries, museums and artists</strong></p>
+          <p>
+            <strong>Software for art galleries, museums and artists</strong>
+          </p>
 
           <p>Tech stack:</p>
           <ul>
@@ -142,8 +183,12 @@ const Main = () => {
           where="Desic"
           when="April 2018 - October 2020"
         >
-          <p><strong>Development of applications for the public administration</strong></p>
-          
+          <p>
+            <strong>
+              Development of applications for the public administration
+            </strong>
+          </p>
+
           <p>Tech stack:</p>
           <ul>
             <li>Java, Javascript</li>
@@ -165,10 +210,18 @@ const Main = () => {
           <ul>
             <li>Migration of projects from Subversion to Git</li>
             <li>Help onboard, mentor and review junior devs</li>
-            <li>Responsible of the renovation and customization of styles and themes of the applications</li>
-            <li>Refactoring of great part of the code to reusable components</li>
+            <li>
+              Responsible of the renovation and customization of styles and
+              themes of the applications
+            </li>
+            <li>
+              Refactoring of great part of the code to reusable components
+            </li>
             <li>In charge of deployments, user support</li>
-            <li>Participation in the process of deployment automation and the introduction of tools like Docker</li>
+            <li>
+              Participation in the process of deployment automation and the
+              introduction of tools like Docker
+            </li>
             <li>Maintenance and support of Redmine plugins</li>
           </ul>
         </ResumeItem>
@@ -178,7 +231,9 @@ const Main = () => {
           where="Edosoft Factory"
           when="October 2017 - March 2018"
         >
-          <p><strong>General consulting company</strong></p>
+          <p>
+            <strong>General consulting company</strong>
+          </p>
 
           <p>Tech stack:</p>
           <ul>
@@ -190,10 +245,21 @@ const Main = () => {
 
           <p>Competences:</p>
           <ul>
-            <li>Development of Angular and Node/Python applications on Google Cloud Platform (App Engine, Compute Engine, Kubernetes)</li>
-            <li>Big data analysis with BigQuery and Python libraries like Scrapy</li>
-            <li>Following Agile methodologies like Scrum and Kanban, hand in hand with TDD</li>
-            <li>Use of Google Machine Learning APIs like Vision and Natural Language</li>
+            <li>
+              Development of Angular and Node/Python applications on Google
+              Cloud Platform (App Engine, Compute Engine, Kubernetes)
+            </li>
+            <li>
+              Big data analysis with BigQuery and Python libraries like Scrapy
+            </li>
+            <li>
+              Following Agile methodologies like Scrum and Kanban, hand in hand
+              with TDD
+            </li>
+            <li>
+              Use of Google Machine Learning APIs like Vision and Natural
+              Language
+            </li>
           </ul>
         </ResumeItem>
 
@@ -202,7 +268,9 @@ const Main = () => {
           where="Welovroi"
           when="April 2016 - June 2016"
         >
-          <p><strong>CRM for ROI and KPIs tracking and management</strong></p>
+          <p>
+            <strong>CRM for ROI and KPIs tracking and management</strong>
+          </p>
 
           <ul>
             <li>CRM on Ruby on Rails</li>
@@ -215,12 +283,21 @@ const Main = () => {
           where="Geosys"
           when="April 2015 - June 2015"
         >
-          <p><strong>Map based applications</strong></p>
+          <p>
+            <strong>Map based applications</strong>
+          </p>
 
           <ul>
-            <li>Development of <strong>Visit Gozo</strong>, built on esri maps, through their framework ArcGIS</li>
-            <li>Maps, layers, points of interest and routes served via REST api</li>
-            <li>iOS version written in Swift, Android version written in Java</li>
+            <li>
+              Development of <strong>Visit Gozo</strong>, built on esri maps,
+              through their framework ArcGIS
+            </li>
+            <li>
+              Maps, layers, points of interest and routes served via REST api
+            </li>
+            <li>
+              iOS version written in Swift, Android version written in Java
+            </li>
           </ul>
         </ResumeItem>
       </ResumeSection>

@@ -9,7 +9,7 @@ export const useScrollSpy = (sectionIds: string[]) => {
         .map((id) => {
           const element = document.getElementById(id);
           if (!element) return null;
-          
+
           const rect = element.getBoundingClientRect();
           return {
             id,
@@ -18,14 +18,16 @@ export const useScrollSpy = (sectionIds: string[]) => {
             height: rect.height,
           };
         })
-        .filter((section): section is NonNullable<typeof section> => section !== null);
+        .filter(
+          (section): section is NonNullable<typeof section> => section !== null
+        );
 
       if (sections.length === 0) return;
 
       const threshold = 200;
-      
+
       let activeSection = sections[0];
-      
+
       for (const section of sections) {
         if (section.top <= threshold && section.bottom > threshold) {
           activeSection = section;
@@ -45,7 +47,7 @@ export const useScrollSpy = (sectionIds: string[]) => {
     handleScroll();
 
     window.addEventListener('scroll', handleScroll, { passive: true });
-    
+
     return () => {
       window.removeEventListener('scroll', handleScroll);
     };

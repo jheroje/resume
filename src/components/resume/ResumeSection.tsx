@@ -16,6 +16,4 @@ const ResumeSection = ({ id, title, children }: ResumeSectionProps) => (
   </section>
 );
 
-
-
 export default ResumeSection;

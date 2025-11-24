@@ -19,6 +19,4 @@ const ResumeItem = ({ title, where, when, children }: ResumeItemProps) => (
   </div>
 );
 
-
-
 export default ResumeItem;

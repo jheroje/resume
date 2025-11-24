@@ -1,6 +1,6 @@
 import { useState } from 'react';
-import { useScrollSpy } from '../hooks/useScrollSpy';
 import config from '../config';
+import { useScrollSpy } from '../hooks/useScrollSpy';
 import Scroll from './Scroll';
 
 const Sidebar = () => {

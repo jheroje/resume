@@ -37,7 +37,11 @@ const Scroll = ({ type, element, offset, timeout, children }: ScrollType) => {
     }
   };
 
-  const scrollTo = (element: Element, offSet = 0, timeout: number | null | undefined = null) => {
+  const scrollTo = (
+    element: Element,
+    offSet = 0,
+    timeout: number | null | undefined = null
+  ) => {
     const elemPos: number =
       (element?.getBoundingClientRect().top ?? 0) + window.pageYOffset;
 
@@ -65,7 +69,5 @@ const Scroll = ({ type, element, offset, timeout, children }: ScrollType) => {
 
   return cloneElement(children, elementProps);
 };
-
-
 
 export default Scroll;
