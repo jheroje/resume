@@ -1,5 +1,4 @@
 import { useContext } from 'react';
-import '../assets/sass/resume.scss';
 import ThemeContext from './theme/ThemeContext';
 
 type LayoutProps = {
