@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import Scrollspy from 'react-scrollspy';
-import config from '../../config';
+import config from '../config';
 import Scroll from './Scroll';
 
 const Sidebar = () => {
