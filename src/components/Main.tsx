@@ -51,7 +51,7 @@ const Main = () => {
         >
           <p>
             <strong>
-              VOD & Live TV Streaming – Leading Media Company in DACH Region
+              VOD & Live TV Streaming | Leading Media Company in DACH Region
             </strong>
           </p>
 
@@ -66,6 +66,10 @@ const Main = () => {
 
           <p>Competences:</p>
           <ul>
+            <li>
+              Launch of the platform in the Austrian and Swiss markets, driving
+              MAU growth from 4M to 11.4M
+            </li>
             <li>
               Development of the internal tool for content management, curation
               and promotion
@@ -96,6 +100,8 @@ const Main = () => {
           <p>
             <strong>AI/ML consulting company</strong>
           </p>
+
+          <p>Short term contract</p>
 
           <p>Tech stack:</p>
           <ul>
@@ -163,6 +169,8 @@ const Main = () => {
           <p>
             <strong>Software for art galleries, museums and artists</strong>
           </p>
+
+          <p>Short term contract</p>
 
           <p>Tech stack:</p>
           <ul>
