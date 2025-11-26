@@ -11,7 +11,7 @@ import {
   renderToFile,
 } from '@react-pdf/renderer';
 import path from 'path';
-import { JSX } from 'react';
+import React from 'react';
 import config from '../src/config';
 import { resumeData } from '../src/data/resume';
 
@@ -235,7 +235,7 @@ export default function PageTopPadding({
   padding = 20,
 }: {
   padding?: number;
-}): JSX.Element {
+}): React.JSX.Element {
   return (
     <View
       fixed
