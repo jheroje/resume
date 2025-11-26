@@ -6,6 +6,11 @@ section.resume-section {
     .resume-date {
       min-width: none;
     }
+    .resume-content {
+      ul {
+        padding-inline-start: 30px;
+      }
+    }
   }
 }
 @media (min-width: 768px) {

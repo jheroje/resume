@@ -48,7 +48,7 @@ const config: Config = {
     {
       icon: 'fa-linkedin-in',
       name: 'Linkedin',
-      url: 'https://www.linkedin.com/in/javier-hernandez-ojeda-1932abb8/',
+      url: 'https://www.linkedin.com/in/javier-hernandez-ojeda-1932abb8',
     },
   ],
   tabs: [

@@ -57,7 +57,7 @@ p.lead {
   font-size: 1.5rem;
 }
 
-.social-icons {
+.header-icons {
   a {
     display: inline-block;
     height: 3.5rem;
@@ -103,7 +103,7 @@ p.lead {
 }
 
 [data-theme='morning'] {
-  .social-icons {
+  .header-icons {
     a {
 
       &:hover,
@@ -147,7 +147,7 @@ p.lead {
     color: $gray-500;
   }
 
-  .social-icons {
+  .header-icons {
     a {
       background-color: $gray-400;
       color: $black !important;
@@ -195,7 +195,7 @@ p.lead {
     color: $gray-500;
   }
 
-  .social-icons {
+  .header-icons {
     a {
       background-color: $gray-400;
       color: $navy !important;

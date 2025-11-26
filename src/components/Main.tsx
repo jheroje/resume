@@ -1,9 +1,11 @@
 import config from '../config';
+import { resumeData } from '../data/resume';
 import ResumeItem from './resume/ResumeItem';
 import ResumeSection from './resume/ResumeSection';
 
 const Main = () => {
   const { firstName, lastName, address, email, socialLinks } = config;
+  const { description, experience, education } = resumeData;
 
   return (
     <div className="container-fluid p-0">
@@ -18,344 +20,103 @@ const Main = () => {
             {email}
           </a>
         </div>
-        <p className="lead mb-5">
-          I am a passionate and versatile developer who quickly adapts to new
-          environments and delivers solutions that prioritize efficiency and
-          quality. Skilled across front-end, back-end, architecture, and
-          infrastructure, with a strong interest in Developer Experience (DX)
-          and DevOps. I thrive in product-focused companies where I can
-          contribute to building impactful, high-quality solutions.
-        </p>
-        <div className="social-icons">
+        <p className="lead mb-5">{description}</p>
+        <div className="header-icons">
           {socialLinks.map(({ name, url, icon }) => (
             <a
               key={url}
               href={url}
               aria-label={name}
+              title={name}
               target="_blank"
               rel="noopener noreferrer"
             >
               <i className={`fab ${icon}`}></i>
             </a>
           ))}
+          <a
+            key="/resume/resume.pdf"
+            href="/resume/resume.pdf"
+            aria-label="Download as PDF"
+            title="Download as PDF"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <i className="fas fa-file-download"></i>
+          </a>
         </div>
       </ResumeSection>
 
       <hr className="m-0" />
 
       <ResumeSection id="experience" title="Experience">
-        <ResumeItem
-          title="Senior Software Engineer"
-          where="Joyn - ProSiebenSat.1 Media"
-          when="August 2022 - October 2025"
-        >
-          <p>
-            <strong>
-              VOD & Live TV Streaming | Leading Media Company in DACH Region
-            </strong>
-          </p>
+        {experience.map((job, index) => (
+          <ResumeItem
+            key={index}
+            title={job.title}
+            where={job.company}
+            when={job.period}
+            location={job.location}
+          >
+            <p>
+              <strong>{job.description}</strong>
+            </p>
 
-          <p>Tech stack:</p>
-          <ul>
-            <li>Javascript, Typescript, Node</li>
-            <li>React, Next, NestJS, GraphQL</li>
-            <li>AWS, Kafka, Serverless, Terraform, Docker</li>
-            <li>PostgreSQL, DynamoDB, Redis</li>
-            <li>Algolia</li>
-          </ul>
+            <p>{job.details}</p>
 
-          <p>Competences:</p>
-          <ul>
-            <li>
-              Launch of the platform in the Austrian and Swiss markets, driving
-              MAU growth from 4M to 11.4M
-            </li>
-            <li>
-              Development of the internal tool for content management, curation
-              and promotion
-            </li>
-            <li>
-              Generation of catalogs and feeds for integration and
-              discoverability from external partners such as Google, Amazon Fire
-              TV, Apple TV, Samsung TV, Sky, Magenta TV, TiVo, Vidaa, and more
-            </li>
-            <li>
-              Implementation of layout curation tool to integrate Joyn content
-              into partner's platforms
-            </li>
-            <li>
-              Collaboration with multiple teams through the whole content
-              pipeline from raw metadata to the user
-            </li>
-            <li>Close cooperation with product and design teams</li>
-            <li>Maintenance and improvement of the content search</li>
-          </ul>
-        </ResumeItem>
+            {job.techStack.length > 0 && (
+              <>
+                <p>Tech stack:</p>
+                <ul>
+                  {job.techStack.map((item, i) => (
+                    <li key={i}>{item}</li>
+                  ))}
+                </ul>
+              </>
+            )}
 
-        <ResumeItem
-          title="DevOps Engineer"
-          where="Pentaquark"
-          when="July 2022 - August 2022"
-        >
-          <p>
-            <strong>AI/ML consulting company</strong>
-          </p>
+            {job.projects && job.projects.length > 0 && (
+              <>
+                <p>Projects:</p>
+                <ul>
+                  {job.projects.map((item, i) => (
+                    <li key={i}>{item}</li>
+                  ))}
+                </ul>
+              </>
+            )}
 
-          <p>Short term contract</p>
-
-          <p>Tech stack:</p>
-          <ul>
-            <li>Javascript, Typescript, Node, Python</li>
-            <li>AWS, Serverless</li>
-          </ul>
-
-          <p>Competences:</p>
-          <ul>
-            <li>
-              Architecture definition and implementation for serverless ML
-              processes
-            </li>
-            <li>AWS accounts setup and administration</li>
-            <li>Mentoring and review of application code</li>
-          </ul>
-        </ResumeItem>
-
-        <ResumeItem
-          title="Full Stack Developer"
-          where="Insendi"
-          when="April 2021 - June 2022"
-        >
-          <p>
-            <strong>Learning platform for universities</strong>
-          </p>
-
-          <p>Tech stack:</p>
-          <ul>
-            <li>Javascript, Typescript, Node</li>
-            <li>Next, React, Redux</li>
-            <li>PostgreSQL, Redis, Knex, Objection</li>
-            <li>AWS, Docker, Kubernetes, CircleCI, Terraform</li>
-          </ul>
-
-          <p>Competences:</p>
-          <ul>
-            <li>
-              Contributed to the whole scope of the application, from activities
-              and learning management to the platform underneath
-            </li>
-            <li>
-              Vast improvements in the fluidity of the interface and performance
-              of the application in general
-            </li>
-            <li>
-              Solved vulnerabilities and removed tech debt across the platform
-            </li>
-            <li>
-              Participated in the Cloud Foundations team redefining tools,
-              architecture, infrastructure and devops practices
-            </li>
-            <li>
-              Mentoring product team developers and introducing them to all the
-              new concepts and processes
-            </li>
-          </ul>
-        </ResumeItem>
-
-        <ResumeItem
-          title="Front End Developer"
-          where="ITGallery"
-          when="February 2021 - April 2021"
-        >
-          <p>
-            <strong>Software for art galleries, museums and artists</strong>
-          </p>
-
-          <p>Short term contract</p>
-
-          <p>Tech stack:</p>
-          <ul>
-            <li>Javascript, Typescript</li>
-            <li>React, Redux</li>
-            <li>PHP, Laravel</li>
-            <li>Unity3D</li>
-            <li>MySQL</li>
-          </ul>
-
-          <p>Projects:</p>
-          <ul>
-            <li>Art gallery management SaaS</li>
-            <li>Art gallery virtual exhibitions</li>
-          </ul>
-        </ResumeItem>
-
-        <ResumeItem
-          title="Full Stack Developer"
-          where="Desic"
-          when="April 2018 - October 2020"
-        >
-          <p>
-            <strong>
-              Development of applications for the public administration
-            </strong>
-          </p>
-
-          <p>Tech stack:</p>
-          <ul>
-            <li>Java, Javascript</li>
-            <li>JSF, PrimeFaces</li>
-            <li>PostgreSQL, Oracle</li>
-            <li>Spring, Hibernate</li>
-            <li>Some projects using Node, Ruby on Rails, PHP</li>
-          </ul>
-
-          <p>Projects:</p>
-          <ul>
-            <li>Vaccine management system</li>
-            <li>Security and emergencies management system</li>
-            <li>Government{"'"}s document and data management system</li>
-            <li>Internal tools and libraries</li>
-          </ul>
-
-          <p>Competences:</p>
-          <ul>
-            <li>Migration of projects from Subversion to Git</li>
-            <li>Help onboard, mentor and review junior devs</li>
-            <li>
-              Responsible of the renovation and customization of styles and
-              themes of the applications
-            </li>
-            <li>
-              Refactoring of great part of the code to reusable components
-            </li>
-            <li>In charge of deployments, user support</li>
-            <li>
-              Participation in the process of deployment automation and the
-              introduction of tools like Docker
-            </li>
-            <li>Maintenance and support of Redmine plugins</li>
-          </ul>
-        </ResumeItem>
-
-        <ResumeItem
-          title="Full Stack Developer"
-          where="Edosoft Factory"
-          when="October 2017 - March 2018"
-        >
-          <p>
-            <strong>General consulting company</strong>
-          </p>
-
-          <p>Tech stack:</p>
-          <ul>
-            <li>Javascript, Typescript</li>
-            <li>Angular</li>
-            <li>Python</li>
-            <li>GCP, Docker, Kubernetes</li>
-          </ul>
-
-          <p>Competences:</p>
-          <ul>
-            <li>
-              Development of Angular and Node/Python applications on Google
-              Cloud Platform (App Engine, Compute Engine, Kubernetes)
-            </li>
-            <li>
-              Big data analysis with BigQuery and Python libraries like Scrapy
-            </li>
-            <li>
-              Following Agile methodologies like Scrum and Kanban, hand in hand
-              with TDD
-            </li>
-            <li>
-              Use of Google Machine Learning APIs like Vision and Natural
-              Language
-            </li>
-          </ul>
-        </ResumeItem>
-
-        <ResumeItem
-          title="Web Developer Intern"
-          where="Welovroi"
-          when="April 2016 - June 2016"
-        >
-          <p>
-            <strong>CRM for ROI and KPIs tracking and management</strong>
-          </p>
-
-          <ul>
-            <li>CRM on Ruby on Rails</li>
-            <li>Data stored on MongoDB through Mongoid ORM</li>
-          </ul>
-        </ResumeItem>
-
-        <ResumeItem
-          title="Android and iOS Developer Intern"
-          where="Geosys"
-          when="April 2015 - June 2015"
-        >
-          <p>
-            <strong>Map based applications</strong>
-          </p>
-
-          <ul>
-            <li>
-              Development of <strong>Visit Gozo</strong>, built on esri maps,
-              through their framework ArcGIS
-            </li>
-            <li>
-              Maps, layers, points of interest and routes served via REST api
-            </li>
-            <li>
-              iOS version written in Swift, Android version written in Java
-            </li>
-          </ul>
-        </ResumeItem>
+            {job.competences.length > 0 && (
+              <>
+                <p>Competences:</p>
+                <ul>
+                  {job.competences.map((item, i) => (
+                    <li key={i}>{item}</li>
+                  ))}
+                </ul>
+              </>
+            )}
+          </ResumeItem>
+        ))}
       </ResumeSection>
 
       <hr className="m-0" />
 
       <ResumeSection id="education" title="Education">
-        <ResumeItem
-          title="Front End Development Course"
-          where="EOI"
-          when="March 2017 - June 2017"
-        >
-          <ul>
-            <li>JavaScript, Jquery</li>
-            <li>Angular</li>
-            <li>SASS</li>
-            <li>UI/UX</li>
-            <li>Git</li>
-            <li>Layout</li>
-          </ul>
-        </ResumeItem>
-
-        <ResumeItem
-          title="Cross Platfrom Applications Development"
-          where="IES El Rincón"
-          when="September 2015 - June 2016"
-        >
-          <ul>
-            <li>C#, Java</li>
-            <li>Android</li>
-            <li>Unity 3D</li>
-            <li>Dynamics NAV</li>
-          </ul>
-        </ResumeItem>
-
-        <ResumeItem
-          title="Web Applications Development"
-          where="IES El Rincón"
-          when="September 2013 - June 2015"
-        >
-          <ul>
-            <li>HTML, CSS, JavaScript</li>
-            <li>Node, Java, PHP</li>
-            <li>SQL, MySQL</li>
-            <li>Interfaces, Usability, Accessibility</li>
-            <li>Git</li>
-          </ul>
-        </ResumeItem>
+        {education.map((edu, index) => (
+          <ResumeItem
+            key={index}
+            title={edu.title}
+            where={edu.school}
+            when={edu.period}
+          >
+            <ul>
+              {edu.details.map((item, i) => (
+                <li key={i}>{item}</li>
+              ))}
+            </ul>
+          </ResumeItem>
+        ))}
       </ResumeSection>
 
       <hr className="m-0" />
@@ -389,6 +150,9 @@ const Main = () => {
           </li>
           <li className="list-inline-item">
             <i className="fab fa-git-alt"></i>
+          </li>
+          <li className="list-inline-item">
+            <i className="fab fa-github"></i>
           </li>
           <li className="list-inline-item">
             <i className="fab fa-docker"></i>
