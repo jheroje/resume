@@ -41,6 +41,7 @@ const Main = () => {
             title="Download as PDF"
             target="_blank"
             rel="noopener noreferrer"
+            download="javier-hernandez-ojeda-resume.pdf"
           >
             <i className="fas fa-file-download"></i>
           </a>
