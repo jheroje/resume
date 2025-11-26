@@ -24,6 +24,8 @@
   }
 
   .navbar-toggler {
+    border: none;
+    
     &:focus {
       outline: 2.5px solid $gray-300;
     }

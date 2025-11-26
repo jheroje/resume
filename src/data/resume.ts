@@ -60,7 +60,7 @@ export const resumeData: ResumeData = {
       competences: [
         'Launch of the platform in the Austrian and Swiss markets, driving MAU growth from 4M to 11.4M',
         'Development of the internal tool for content management, curation and promotion',
-        'Generation of catalogs and feeds for integration and discoverability from external partners such as Google, Amazon Fire TV, Apple TV, Samsung TV, Sky, Magenta TV, TiVo, Vidaa, and more',
+        'Generation of catalogs and feeds for integration and discoverability from external partners such as Google, Amazon Fire TV, Apple TV, Samsung TV, Sky, Deutsche Telekom Magenta TV, TiVo, Vidaa, and more',
         "Implementation of layout curation tool to integrate Joyn content into partner's platforms",
         'Collaboration with multiple teams through the whole content pipeline from raw metadata to the user',
         'Close cooperation with product and design teams',
